@@ -1,12 +1,398 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>robertopc github pages</title>
+    <meta charset="UTF-8">
+    <title>RobertoPC - Desenvolvedor Web</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="http://fonts.googleapis.com/css?family=Orbitron:400,900" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    
-    robertopc github pages
-    04/05/15
-    
+	<canvas id="estrelas"></canvas>
+
+	<svg
+	   version="1.1"
+	   width="1500"
+	   height="1500"
+	   id="sistemasolar">
+		<style type="text/css">
+			@-webkit-keyframes translacao {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes translacao {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			#sistemasolar {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				-webkit-transform: translate(-50%, -40%) scale(0.75);
+				transform: translate(-50%, -40%) scale(0.75);
+			}
+
+			.orbita {
+				fill: none;
+				stroke: #ffffff;
+				opacity: 0.75;
+			}
+
+			.planeta {
+				-webkit-animation: translacao 5s linear infinite;
+				animation: translacao 5s linear infinite;
+				-webkit-transform-origin: 750px 750px;
+				transform-origin: 750px 750px;
+			}
+
+			#mercurio { -webkit-animation-duration: 10s; animation-duration: 10s; }
+			#venus    { -webkit-animation-duration: 20s; animation-duration: 20s; }
+			#terra    { -webkit-animation-duration: 30s; animation-duration: 30s; }
+			#marte    { -webkit-animation-duration: 40s; animation-duration: 40s; }
+			#jupiter  { -webkit-animation-duration: 50s; animation-duration: 50s; }
+			#saturno  { -webkit-animation-duration: 60s; animation-duration: 60s; }
+			#urano    { -webkit-animation-duration: 70s; animation-duration: 70s; }
+			#netuno   { -webkit-animation-duration: 80s; animation-duration: 80s; }
+			#plutao   { -webkit-animation-duration: 90s; animation-duration: 90s; }
+		</style>
+		<defs>
+			<pattern id="avatar" patternUnits="userSpaceOnUse" width="100" height="100">
+				<image xlink:href="https://s.gravatar.com/avatar/59076cb7e11b7320dd48f7560b5be6e2?s=100" x="0" y="0" width="100" height="100" />
+			</pattern>
+		</defs>
+	  <path
+		 d="m 800.50763,750.00005 a 50.507631,50.507631 0 1 1 -101.01526,0 50.507631,50.507631 0 1 1 101.01526,0 z"
+		 id="sol"
+		 style="fill:url(#avatar);fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:3" />
+	  <path
+		 d="m 850.04176,750.00005 a 100.04176,100.04176 0 1 1 -200.08353,0 100.04176,100.04176 0 1 1 200.08353,0 z"
+		 class="orbita"
+		 style="stroke-width:0.1;stroke-opacity:1" />
+	  <path
+		 d="m 951.02035,750.00004 a 201.02036,201.02036 0 1 1 -402.04072,0 201.02036,201.02036 0 1 1 402.04072,0 z"
+		 class="orbita"
+		 style="stroke-width:0.1;stroke-opacity:1"/>
+	  <path
+		 d="m 900.52842,750.00004 a 150.52843,150.52843 0 1 1 -301.05686,0 150.52843,150.52843 0 1 1 301.05686,0 z"
+		 class="orbita"
+		 style="stroke-width:0.09999999;stroke-opacity:1" />
+	  <path
+		 d="m 1013.6186,750.00003 a 263.61858,263.61858 0 1 1 -527.23715,0 263.61858,263.61858 0 1 1 527.23715,0 z"
+		 class="orbita"
+		 style="stroke-width:0.1;stroke-opacity:1" />
+	  <path
+		 d="m 1092.3909,750.00004 a 342.39088,342.39088 0 1 1 -684.78176,0 342.39088,342.39088 0 1 1 684.78176,0 z"
+		 class="orbita"
+		 style="stroke-width:0.10000001;stroke-opacity:1" />
+	  <path
+		 d="m 1180.2522,750.00004 a 430.25228,430.25228 0 1 1 -860.50452,0 430.25228,430.25228 0 1 1 860.50452,0 z"
+		 class="orbita"
+		 style="stroke-width:0.1;stroke-opacity:1" />
+	  <path
+		 d="m 1287.3018,750.00007 a 537.30184,537.30184 0 1 1 -1074.60368,0 537.30184,537.30184 0 1 1 1074.60368,0 z"
+		 class="orbita"
+		 style="stroke-width:0.10000002;stroke-opacity:1" />
+	  <path
+		 d="m 1387.282,750.00004 a 637.28206,637.28206 0 1 1 -1274.56412,0 637.28206,637.28206 0 1 1 1274.56412,0 z"
+		 class="orbita"
+		 style="stroke-width:0.10000004;stroke-opacity:1" />
+	  <path
+		 d="m 1490.292,750.00002 a 740.29202,740.29202 0 1 1 -1480.5840364,0 740.29202,740.29202 0 1 1 1480.5840364,0 z"
+		 class="orbita"
+		 style="stroke-width:0.1;stroke-opacity:1" />
+	  <path
+		 d="m 746.25601,856.41728 a 6.9990996,6.9990996 0 1 1 7.48799,-11.82707 6.9990996,6.9990996 0 0 1 -7.48799,11.82707 z"
+		 id="mercurio"
+		 class="planeta"
+		 style="fill:#674c41;fill-opacity:1;" />
+	  <path
+		 d="m 743.48668,910.64336 a 12.176131,12.176131 0 1 1 13.02664,-20.57521 12.176131,12.176131 0 0 1 -13.02664,20.57521 z"
+		 id="venus"
+		 class="planeta"
+		 style="fill:#6a2213;fill-opacity:1;" />
+	  <path
+		 d="m 743.48668,962.28378 a 12.176131,12.176131 0 1 1 13.02664,-20.57521 12.176131,12.176131 0 0 1 -13.02664,20.57521 z"
+		 id="terra"
+		 class="planeta"
+		 style="fill:#0044aa;fill-opacity:1;" />
+	  <path
+		 d="m 746.82293,1017.8245 a 5.9392846,5.9392846 0 0 1 6.35414,-10.0362 5.9392846,5.9392846 0 0 1 -6.35414,10.0362 z"
+		 id="marte"
+		 class="planeta"
+		 style="fill:#88552c;fill-opacity:1;" />
+	  <path
+		 d="m 736.50248,1112.951 a 25.225009,25.225009 0 0 1 26.98697,-42.6252 25.225009,25.225009 0 1 1 -26.98697,42.6252 z"
+		 id="jupiter"
+		 class="planeta"
+		 style="fill:#e1aa61;fill-opacity:1;" />
+	  <path
+		 d="m 750.375,1162.6562 c -3.62419,-0.075 -7.26214,1.1269 -10.12865,3.3458 -2.86651,2.2189 -4.94167,5.4395 -5.7776,8.9668 -5.67335,1.379 -7.54109,3.7066 -0.125,6.9374 0.86296,4.1893 3.48354,7.9875 7.09375,10.2813 4.31153,2.7215 9.95614,3.2041 14.66707,1.2539 4.71093,-1.9502 8.36283,-6.2812 9.48918,-11.2539 6.05362,-2.3294 5.00879,-5.8881 -0.0312,-7.2187 -0.94632,-4.0186 -3.51483,-7.6306 -7,-9.8438 -2.43981,-1.5407 -5.30265,-2.404 -8.1875,-2.4688 z"
+		 id="saturno"
+		 class="planeta"
+		 style="fill:#cbc490;fill-opacity:1;" />
+	  <path
+		 d="m 744.27413,1297.1114 a 10.704053,10.704053 0 0 1 11.45173,-18.0877 10.704053,10.704053 0 0 1 -11.45173,18.0877 z"
+		 id="urano"
+		 class="planeta"
+		 style="fill:#4ab3e3;fill-opacity:1;" />
+	  <path
+		 d="m 744.89897,1394.0355 a 9.543329,9.543329 0 1 1 10.20994,-16.1263 9.543329,9.543329 0 0 1 -10.20994,16.1263 z"
+		 id="netuno"
+		 class="planeta"
+		 style="fill:#3e67f0;fill-opacity:1;" />
+	  <path
+		 d="m 748.11891,1492.8043 a 3.5165654,3.5165654 0 1 1 3.76218,-5.9423 3.5165654,3.5165654 0 0 1 -3.76218,5.9423 z"
+		 id="plutao"
+		 class="planeta"
+		 style="fill:#cccccc;fill-opacity:1;" />
+	</svg>
+
+	<div id="container">
+
+		<header id="logo">
+			<h1>RobertoPC<br><small>Desenvolvedor Web</small></h1>
+		</header>
+
+		<nav id="menu">
+			<ul>
+				<li>
+					<a href="#portifolio"><img src="icons/rocket.svg">PORTIFOLIO</a>
+				</li>
+				<li>
+					<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg">CURRICULO</a>
+				</li>
+				<li>
+					<a href="http://robertopc.net/blog"><img src="icons/wordpress.svg">BLOG</a>
+				</li>
+			</ul>
+		</nav>
+
+		<nav id="icones">
+			<a href="http://facebook.com/robertopc0"><img src="icons/facebook.svg"></a>
+			<a href="http://twitter.com/robertopc0"><img src="icons/twitter.svg"></a>
+			<a href="http://github.com/robertopc"><img src="icons/github.svg"></a>
+			<a href="mailto:robertopc.prog@gmail.com"><img src="icons/mail.svg"></a>
+			<a href="http://robertopc.net/blog/feed"><img src="icons/feed.svg"></a>
+		</nav>
+
+		<section id="portifolio">
+			<h2><img src="icons/rocket.svg" height="20"> PORTIFOLIO</h2>
+			<p>
+				<a>Sites</a>
+			</p>
+			<p>
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('culturaltiger')">
+					<defs>
+						<pattern id="culturaltiger" patternUnits="userSpaceOnUse" width="100" height="100">
+							<image xlink:href="thumbs/culturaltiger.png" x="5" y="8" width="54" height="32" />
+						</pattern>
+					</defs>
+					<rect
+						width="56.234776"
+						height="32.355091"
+						x="3.8814414"
+						y="7.8244505"
+						id="rect2987"
+						style="fill:url(#culturaltiger);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
+				</svg>
+
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('cursoats')">
+					<defs>
+						<pattern id="cursoats" patternUnits="userSpaceOnUse" width="100" height="100">
+							<image xlink:href="thumbs/cursoats.png" x="5" y="8" width="54" height="32" />
+						</pattern>
+					</defs>
+					<rect
+						width="56.234776"
+						height="32.355091"
+						x="3.8814414"
+						y="7.8244505"
+						id="rect2987"
+						style="fill:url(#cursoats);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
+				</svg>
+
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('gruposeaplan')">
+					<defs>
+						<pattern id="gruposeaplan" patternUnits="userSpaceOnUse" width="100" height="100">
+							<image xlink:href="thumbs/gruposeaplan.png" x="5" y="8" width="54" height="32" />
+						</pattern>
+					</defs>
+					<rect
+						width="56.234776"
+						height="32.355091"
+						x="3.8814414"
+						y="7.8244505"
+						id="rect2987"
+						style="fill:url(#gruposeaplan);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
+				</svg>
+			</p>
+			<p>
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('brunicbrindes')">
+					<defs>
+						<pattern id="brunicbrindes" patternUnits="userSpaceOnUse" width="100" height="100">
+							<image xlink:href="thumbs/brunicbrindes.png" x="5" y="8" width="54" height="32" />
+						</pattern>
+					</defs>
+					<rect
+						width="56.234776"
+						height="32.355091"
+						x="3.8814414"
+						y="7.8244505"
+						id="rect2987"
+						style="fill:url(#brunicbrindes);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
+				</svg>
+
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('trifana')">
+					<defs>
+						<pattern id="trifana" patternUnits="userSpaceOnUse" width="100" height="100">
+							<image xlink:href="thumbs/trifana.jpg" x="5" y="8" width="54" height="32" />
+						</pattern>
+					</defs>
+					<rect
+						width="56.234776"
+						height="32.355091"
+						x="3.8814414"
+						y="7.8244505"
+						id="rect2987"
+						style="fill:url(#trifana);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
+				</svg>
+			</p>
+			<p>
+				<a>Aplicativos</a>
+			</p>
+			<p>
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="celular" onclick="javascript:abrePortifolio('tetrisfox')">
+					<defs>
+						<pattern id="tetrisfox" patternUnits="userSpaceOnUse" width="128" height="128">
+							<image xlink:href="thumbs/tetrisfox.png" x="14" y="14" width="32" height="32" />
+						</pattern>
+					</defs>
+					<rect
+					 style="fill:url(#tetrisfox);fill-opacity:1;fill-rule:nonzero;stroke:none"
+					 id="rect2987"
+					 width="36.338985"
+					 height="44.474575"
+					 x="11.796611"
+					 y="7.7288136" />
+					<path
+					 d="M48 0h-36c-2.2 0-4 1.8-4 4v56c0 2.2 1.8 4 4 4h36c2.2 0 4-1.8 4-4v-56c0-2.2-1.8-4-4-4zM30 61.111c-1.718 0-3.111-1.393-3.111-3.111s1.393-3.111 3.111-3.111 3.111 1.393 3.111 3.111-1.393 3.111-3.111 3.111zM48 52h-36v-44h36v44z"
+					 fill="#ffffff"
+					 id="path4"
+					 style="fill:#ffffff" />
+				</svg>
+			</p>
+			<div id="info">
+
+				<div id="infoculturaltiger">
+					<h3>Cultural Tiger</h3>
+
+					<img src="prints/cultural-tiger.jpg">
+
+					<p><a href="http://www.culturaltiger.com.br">www.culturaltiger.com.br <img src="icons/new-tab.svg" height="16"></a></p>
+					<p>Desenvolvimento do site da empresa Cultural Tiger.</p>
+					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, CODEIGNITER</small></p>
+				</div>
+
+				<div id="infocursoats">
+					<h3>Curso ATS</h3>
+
+					<img src="prints/colegio-curso-ats.jpg">
+
+					<p><a href="http://www.cursoats.com.br">www.cursoats.com.br <img src="icons/new-tab.svg" height="16"></a></p>
+					<p>Desenvolvimento do site do Curso Preparatório ATS.<br>Adaptação ao CMS Joomla.<br>Criação de componentes e módulos personalizados.</p>
+					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, JOOMLA</small></p>
+				</div>
+
+				<div id="infogruposeaplan">
+					<h3>Grupo Seaplan</h3>
+
+					<img src="prints/grupo-seaplan.jpg">
+
+					<p><a href="http://www.gruposeaplan.com.br">www.gruposeaplan.com.br <img src="icons/new-tab.svg" height="16"></a></p>
+					<p>Desenvolvimento do site da empresa Grupo SEAPLAN.</p>
+					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, FLASH</small></p>
+				</div>
+
+				<div id="infobrunicbrindes">
+					<h3>Brunic Brindes</h3>
+
+					<img src="prints/brunic-brindes.jpg">
+
+					<p><a href="http://www.brunicbrindes.com.br">www.brunicbrindes.com.br <img src="icons/new-tab.svg" height="16"></a></p>
+					<p>Desenvolvimento do site da empresa Brunic Brindes.</p>
+					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, WEBSERVICE CORREIOS, API PAGSEGURO</small></p>
+				</div>
+
+				<div id="infotrifana">
+					<h3>Trifana</h3>
+
+					<img src="prints/trifana.jpg">
+
+					<p><a href="http://www.trifana.com.br">www.trifana.com.br <img src="icons/new-tab.svg" height="16"></a></p>
+					<p>Criação do site do Studio de Beleza Trifana.</p>
+					<p><small><img src="icons/embed.svg" height="16"> HTML, CSS, JAVASCRIPT, GIMP</small></p>
+				</div>
+
+				<div id="infotetrisfox">
+					<h3>TetrisFOX</h3>
+
+					<img src="prints/tetrisfox.png">
+
+					<p><a href="https://marketplace.firefox.com/app/tetrisfox">https://marketplace.firefox.com/app/tetrisfox <img src="icons/new-tab.svg" height="16"></a></p>
+					<p>Aplicativo desenvolvido para Firefox OS</p>
+					<p>Réplica do famoso jogo Tetris com atualmente mais de 14.000 instalações e com avaliação de 5 estrelas.</p>
+				</div>
+
+			</div>
+			<div id="topo">
+				<a href="#" title="Ir para o topo"><img src="icons/up.svg" height="32"></a>
+			</div>
+		</section>
+
+	</div>
+
+	<script>
+
+		function abrePortifolio( nome ) {
+			var paginas = ["culturaltiger","cursoats","gruposeaplan","brunicbrindes","trifana","tetrisfox"];
+			for( p in paginas) {
+				document.getElementById('info'+ paginas[p]).style.display = "none";
+			}
+			document.getElementById('info' + nome ).style.display = "block";
+		}
+
+		(function() {
+
+			var canvas        = document.getElementById('estrelas');
+				canvas.width  = window.screen.availWidth || window.screen.width;
+				canvas.height = window.screen.availHeight || window.screen.height;
+				canvas.height *= 2.5;
+
+			var context = canvas.getContext('2d');
+
+			for( var i = 0; i < 1000; i++ ) {
+				x = Math.round( Math.random() * canvas.width );
+				y = Math.round( Math.random() * canvas.height );
+				context.fillStyle = "#ffffff";
+				context.fillRect( x, y, 1, 1 );
+			}
+		})();
+
+	</script>
+
 </body>
 </html>

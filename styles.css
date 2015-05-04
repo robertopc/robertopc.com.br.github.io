@@ -1,0 +1,204 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: radial-gradient( rgba( 0, 0, 50, 1), rgba( 0, 0, 0, 1));
+	color: white;
+	overflow: hidden;
+	font-family: Orbitron, sans-serif;
+	font-weight: 400;
+	text-shadow: 0 0 5px #0000ff;
+	font-size: 16px;
+}
+a {
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 32px;
+}
+
+h1 hr {
+	margin: 0;
+	border: 0;
+	height: 3px;
+	background: radial-gradient( rgba( 255, 255, 255, 0.8), rgba( 0, 0, 0, 0) );
+}
+
+h1 small {
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1000px;
+	height: 100%;
+	margin-left: -500px;
+}
+
+#logo {
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	transform: translate( -50%, 0);
+	text-align: center;
+}
+
+#menu {
+	position: absolute;
+	top: 400px;
+	left: 0;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	word-spacing: 30px;
+	font-size: 24px;
+}
+
+	#menu a {
+		color: white;
+		text-decoration: none;
+	}
+
+	#menu a:hover {
+		text-decoration: underline;
+	}
+
+	#menu a img {
+		height: 18px;
+		margin-right: 10px;
+	}
+
+	.menu-separador:before {
+		content: " . ";
+	}
+
+	#menu ul {
+		width: 100%;
+        padding: 0;
+	}
+	#menu ul li {
+		float: left;
+		width: 33%;
+		list-style-type: none;
+		text-align: center;
+	}
+
+#icones {
+	position: absolute;
+	top:500px;
+	left:0;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+#icones img {
+	width: 32px;
+	height: 32px;
+	margin: 6px;
+}
+
+#portifolio {
+	position: absolute;
+	top: 150%;
+	left: 0;
+	width: 90%;
+	height: 90%;
+	margin: 0 5%;
+}
+
+.computador {
+	margin: 5px;
+}
+
+.computador, .celular {
+	cursor: pointer;
+}
+
+#info {
+	position: absolute;
+	top: 0;
+	left: 40%;
+	width: 480px;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+	#info div {
+		display: none;
+	}
+
+	#info p {
+		text-shadow: none;
+		font-family: Roboto, sans-serif;
+	}
+
+	#info img {
+		border: white 1px solid;
+	}
+
+	#info p img {
+		border: none;
+	}
+
+#topo {
+	position: absolute;
+	bottom: -32px;
+	left: 0;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+@media (max-width: 870px), (max-height: 600px) {
+    
+    #sistemasolar {
+        top: -75px !important;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    #container {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    
+    #logo {
+        top: 150px;
+    }
+    
+    #menu {
+        top: 275px;
+        height: auto;
+    }
+    
+    #menu ul {
+        padding: 0;
+    }
+    
+    #menu ul li {
+        float: none;
+		width: 100%;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    
+    #icones {
+        top: 420px;
+    }
+}
