@@ -161,3 +161,32 @@ h2 {
 	height: auto;
 	text-align: center;
 }
+
+@media (max-width: 870px), (max-height: 600px) {
+    
+    #sistemasolar {
+        top: -75px !important;
+    }
+        
+    #container {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    
+    #logo {
+        top: 150px;
+    }
+    
+    #menu {
+        display: none;
+    }
+    
+    #icones {
+        top: 300px;
+    }
+    
+    #portifolio {
+        display: none;
+    }
+}
