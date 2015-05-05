@@ -381,7 +381,14 @@
 			var canvas        = document.getElementById('estrelas');
 				canvas.width  = window.screen.availWidth || window.screen.width;
 				canvas.height = window.screen.availHeight || window.screen.height;
-				canvas.height *= 2.5;
+
+            var isVisible = document.getElementById('menu').offsetWidth > 0 || 
+                            document.getElementById('menu').offsetHeight > 0;
+
+
+            if( isVisible ) {
+                canvas.height *= 2.5;
+            }
 
 			var context = canvas.getContext('2d');
 

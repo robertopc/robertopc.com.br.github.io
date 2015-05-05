@@ -63,6 +63,7 @@ h2 {
 	text-align: center;
 	word-spacing: 30px;
 	font-size: 24px;
+    z-index: 123;
 }
 
 	#menu a {
@@ -180,6 +181,7 @@ h2 {
     
     #menu {
         display: none;
+        background: white;
     }
     
     #icones {
