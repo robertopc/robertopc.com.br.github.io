@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>RobertoPC - Desenvolvedor Web</title>
-    
+	<meta charset="UTF-8">
+	<title>RobertoPC - Desenvolvedor Web</title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<link rel="shortcut icon" href="https://s.gravatar.com/avatar/59076cb7e11b7320dd48f7560b5be6e2?s=16">
@@ -54,15 +54,41 @@
 				transform-origin: 750px 750px;
 			}
 
-			#mercurio { -webkit-animation-duration: 10s; animation-duration: 10s; }
-			#venus    { -webkit-animation-duration: 20s; animation-duration: 20s; }
-			#terra    { -webkit-animation-duration: 30s; animation-duration: 30s; }
-			#marte    { -webkit-animation-duration: 40s; animation-duration: 40s; }
-			#jupiter  { -webkit-animation-duration: 50s; animation-duration: 50s; }
-			#saturno  { -webkit-animation-duration: 60s; animation-duration: 60s; }
-			#urano    { -webkit-animation-duration: 70s; animation-duration: 70s; }
-			#netuno   { -webkit-animation-duration: 80s; animation-duration: 80s; }
-			#plutao   { -webkit-animation-duration: 90s; animation-duration: 90s; }
+			#mercurio { -webkit-animation-duration: 10s; 
+						animation-duration: 10s; 
+			}
+			#venus { 
+				-webkit-animation-duration: 20s; 
+				animation-duration: 20s; 
+			}
+			#terra {
+				-webkit-animation-duration: 30s; 
+				animation-duration: 30s;
+			}
+			#marte {
+				-webkit-animation-duration: 40s; 
+				animation-duration: 40s;
+			}
+			#jupiter {
+				-webkit-animation-duration: 50s; 
+				animation-duration: 50s;
+			}
+			#saturno {
+				-webkit-animation-duration: 60s; 
+				animation-duration: 60s;
+			}
+			#urano {
+				-webkit-animation-duration: 70s; 
+				animation-duration: 70s;
+			}
+			#netuno {
+				-webkit-animation-duration: 80s; 
+				animation-duration: 80s;
+			}
+			#plutao {
+				-webkit-animation-duration: 90s; 
+				animation-duration: 90s;
+			}
 		</style>
 		<defs>
 			<pattern id="avatar" patternUnits="userSpaceOnUse" width="100" height="100">
@@ -378,7 +404,8 @@
 			}
 			document.getElementById('info' + nome ).style.display = "block";
 		}
-
+		
+		/* Estrelas */
 		(function() {
 
 			var canvas        = document.getElementById('estrelas');
@@ -402,7 +429,16 @@
 				context.fillRect( x, y, 1, 1 );
 			}
 		})();
+		
+		/* Google Analytics */
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+		ga('create', 'UA-63040990-1', 'auto');
+		ga('send', 'pageview');
+		
 	</script>
 
 </body>
