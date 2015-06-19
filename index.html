@@ -177,11 +177,11 @@
 		 id="plutao"
 		 class="planeta"
 		 style="fill:#cccccc;fill-opacity:1;" />
-	</svg>
+	</svg><!-- #sistemasolar -->
 
 	<div id="container">
 
-		<section id="home">
+		<section id="home" class="container">
 
 			<header id="logo" data-sr="enter bottom wait 0.5s">
 				<h1>RobertoPC<br><small>Desenvolvedor Web<br><small>Freelancer</small></small></h1>
@@ -196,19 +196,19 @@
 						<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg">CURRICULO</a>
 					</li>
 					<li>
-						<a href="mailto:robertopc.prog@gmail.com"><img src="icons/mail.svg">CONTATO</a>
+						<a href="#contato"><img src="icons/mail.svg">CONTATO</a>
 					</li>
 				</ul>
 
 			</nav>
 
-			<article data-sr="enter top wait 1s">
+			<article data-sr="enter top wait 1s" class="text-shadow">
 				<p>Olá, me chamo Roberto e sou desenvolvedor web com mais de 5 anos de experiência e paixão pelo que faço.</p>
 				<p>Trabalho com front-end(HTML5, CSS3 e Javascript) e back-end(PHP e Wordpress).</p>
 				Têm algum projeto e precisa de alguém pra codificar? Pode contar comigo!
 			</article>
 
-			<nav id="icones" data-sr="enter top wait 1s">
+			<nav id="icones" data-sr="wait 1s">
 				<a href="http://twitter.com/robertopc0"><img src="icons/twitter.svg" alt="twitter"></a>
 				<a href="http://github.com/robertopc"><img src="icons/github.svg" alt="github"></a>
 				<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg" alt="linkedin"></a>
@@ -216,13 +216,18 @@
 
 		</section><!-- #home -->
 
-		<section id="portfolio">
-			<h2 data-sr="wait 0.2s and then ease-in-out 100px"><img src="icons/rocket.svg" height="20"> PORTFÓLIO</h2>
-			<p data-sr="wait 0.2s and then ease-in-out 100px">
+		<section id="portfolio" class="container">
+
+			<header>
+				<h1><img src="icons/rocket.svg" height="20"> PORTFÓLIO</h1>
+			</header>
+
+			<p>
 				Sites
 			</p>
+
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('culturaltiger')" data-sr="wait 0.2s and then ease-in-out 100px">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('culturaltiger')">
 					<defs>
 						<pattern id="culturaltiger" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/culturaltiger.png" x="5" y="8" width="54" height="32" />
@@ -238,7 +243,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('cursoats')" data-sr="wait 0.2s and then ease-in-out 100px">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('cursoats')">
 					<defs>
 						<pattern id="cursoats" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/cursoats.png" x="5" y="8" width="54" height="32" />
@@ -254,7 +259,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('gruposeaplan')" data-sr="wait 0.2s and then ease-in-out 100px">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('gruposeaplan')">
 					<defs>
 						<pattern id="gruposeaplan" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/gruposeaplan.png" x="5" y="8" width="54" height="32" />
@@ -270,8 +275,9 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 			</p>
+
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('brunicbrindes')" data-sr="wait 0.2s and then ease-in-out 100px">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('brunicbrindes')">
 					<defs>
 						<pattern id="brunicbrindes" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/brunicbrindes.png" x="5" y="8" width="54" height="32" />
@@ -287,7 +293,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('trifana')" data-sr="wait 0.2s and then ease-in-out 100px">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('trifana')">
 					<defs>
 						<pattern id="trifana" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/trifana.jpg" x="5" y="8" width="54" height="32" />
@@ -303,11 +309,13 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 			</p>
-			<p data-sr="wait 0.2s and then ease-in-out 100px">
+
+			<p>
 				Aplicativos
 			</p>
+
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="celular" onclick="javascript:abrePortfolio('tetrisfox')" data-sr="wait 0.2s and then ease-in-out 100px">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="celular" onclick="javascript:abrePortfolio('tetrisfox')">
 					<defs>
 						<pattern id="tetrisfox" patternUnits="userSpaceOnUse" width="128" height="128">
 							<image xlink:href="thumbs/tetrisfox.png" x="14" y="14" width="32" height="32" />
@@ -336,7 +344,7 @@
 					<img src="prints/cultural-tiger.jpg">
 
 					<p><a href="http://www.culturaltiger.com.br">www.culturaltiger.com.br <img src="icons/new-tab.svg" height="16"></a></p>
-					<p>Desenvolvimento do site da empresa Cultural Tiger.</p>
+					<p>Site da empresa Cultural Tiger.</p>
 					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, CODEIGNITER</small></p>
 				</div>
 
@@ -346,7 +354,7 @@
 					<img src="prints/colegio-curso-ats.jpg">
 
 					<p><a href="http://www.cursoats.com.br">www.cursoats.com.br <img src="icons/new-tab.svg" height="16"></a></p>
-					<p>Desenvolvimento do site do Curso Preparatório ATS.<br>Adaptação ao CMS Joomla.<br>Criação de componentes e módulos personalizados.</p>
+					<p>Site do Curso Preparatório ATS.</p>
 					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, JOOMLA</small></p>
 				</div>
 
@@ -356,7 +364,7 @@
 					<img src="prints/grupo-seaplan.jpg">
 
 					<p><a href="http://www.gruposeaplan.com.br">www.gruposeaplan.com.br <img src="icons/new-tab.svg" height="16"></a></p>
-					<p>Desenvolvimento do site da empresa Grupo SEAPLAN.</p>
+					<p>Site da empresa Grupo SEAPLAN.</p>
 					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, FLASH</small></p>
 				</div>
 
@@ -366,7 +374,7 @@
 					<img src="prints/brunic-brindes.jpg">
 
 					<p><a href="http://www.brunicbrindes.com.br">www.brunicbrindes.com.br <img src="icons/new-tab.svg" height="16"></a></p>
-					<p>Desenvolvimento do site da empresa Brunic Brindes.</p>
+					<p>Site da empresa Brunic Brindes.</p>
 					<p><small><img src="icons/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, WEBSERVICE CORREIOS, API PAGSEGURO</small></p>
 				</div>
 
@@ -376,7 +384,7 @@
 					<img src="prints/trifana.jpg">
 
 					<p><a href="http://www.trifana.com.br">www.trifana.com.br <img src="icons/new-tab.svg" height="16"></a></p>
-					<p>Criação do site do Studio de Beleza Trifana.</p>
+					<p>Site do Studio de Beleza Trifana.</p>
 					<p><small><img src="icons/embed.svg" height="16"> HTML, CSS, JAVASCRIPT, GIMP</small></p>
 				</div>
 
@@ -386,21 +394,29 @@
 					<img src="prints/tetrisfox.jpg">
 
 					<p><a href="https://marketplace.firefox.com/app/tetrisfox">https://marketplace.firefox.com/app/tetrisfox <img src="icons/new-tab.svg" height="16"></a></p>
-					<p>Aplicativo desenvolvido para Firefox OS</p>
-					<p>Réplica do famoso jogo Tetris com atualmente mais de 14.000 instalações e com avaliação de 5 estrelas.</p>
+					<p>Aplicativo para Firefox OS</p>
+					<p>Réplica do famoso jogo Tetris com quase 15000 instalações e avaliação de 5 estrelas.</p>
 				</div>
 
 			</div>
 
-			<div id="topo" data-sr="wait 0.2s">
-				<a href="#" title="Ir para o topo"><img src="icons/up.svg" height="32"></a>
-			</div>
-
 		</section><!-- #portfolio -->
 
-		<section id="contato">
-		</section>
+		<section id="contato" class="container">
 
+			<header>
+
+				<h1>Contato</h1>
+
+			</header>
+
+		</section><!-- #contato -->
+
+	</div>
+
+	<!-- <div id="topo" data-sr="wait 0.2s"> -->
+	<div id="topo">
+		<a href="#home" title="Ir para o topo"><img src="icons/up.svg" height="32"></a>
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
