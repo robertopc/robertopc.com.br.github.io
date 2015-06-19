@@ -1,15 +1,21 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	background: radial-gradient( rgba( 0, 0, 50, 1 ), rgba( 0, 0, 0, 1 ) );
-	color: white;
+	color: #fff;
 	font-family: Orbitron, sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
 	overflow: hidden;
 }
 a {
-	color: white;
+	color: #fff;
 }
 
 a:hover {
@@ -37,7 +43,7 @@ h2 {
 }
 
 .text-shadow {
-	text-shadow: 0 2px 8px #fff;
+	text-shadow: 0 0 5px #fff;
 }
 
 .hidden {
@@ -51,7 +57,10 @@ h2 {
 	width: 960px;
 	height: auto;
 	marign: 0 auto;
-	/*border: rgba(255,255,255,0.1) 1px dotted;*/
+}
+
+.position-relative {
+	position: relative !important;
 }
 
 #container {
@@ -106,7 +115,7 @@ h2 {
 }
 
 	#menu a {
-		color: white;
+		color: #fff;
 		text-decoration: none;
 	}
 
@@ -131,18 +140,13 @@ h2 {
 	}
 
 #icones {
-	/*position: absolute;
-	top:500px;
-	left:0;
-	width: 100%;
-	height: auto;*/
 	text-align: center;
 	margin: 50px 0 0 0;
 }
 
 #icones img {
-	width: 32px;
-	height: 32px;
+	width: 48px;
+	height: 48px;
 	margin: 6px;
 }
 
@@ -177,7 +181,7 @@ h2 {
 	}
 
 	#info img {
-		border: white 1px solid;
+		border: #fff 1px solid;
 	}
 
 	#info p img {
@@ -186,6 +190,51 @@ h2 {
 
 #contato {
 		padding-top: 100px;
+}
+
+#contato article {
+		width: 50%;
+}
+
+#contato form input,
+#contato form button,
+#contato form textarea {
+	width: 100%;
+	background:transparent;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+	padding: 10px;
+	font-family: Roboto;
+	font-size: 16pt;
+	-moz-resize: none;
+	resize: none;
+	outline: none;
+}
+	#contato form input:focus,
+	#contato form textarea:focus {
+		border-color: #00f;
+		outline: none;
+	}
+	#contato form textarea {
+		height: 100px;
+	}
+
+#contato form button[type="submit"] {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #fff;
+		width: 33%;
+		color: #000;
+		font-weight: 900;
+		font-family: Orbitron;
+}
+
+#contatoframe {
+	border: 0;
+	width: 0;
+	height: 0;
 }
 
 #topo {
@@ -212,7 +261,7 @@ h2 {
 
     #menu {
         display: none;
-        background: white;
+        background: #fff;
     }
 
     #icones {

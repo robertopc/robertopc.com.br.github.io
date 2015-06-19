@@ -22,6 +22,7 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<canvas id="estrelas"></canvas>
@@ -41,7 +42,7 @@
 				}
 			}
 			.orbita {
-				fill: rgba(255, 255, 0, 0.03);
+				fill: rgba(255, 255, 0, 0.025);
 				stroke: #ff0;
 				opacity: 0.5;
 			}
@@ -199,7 +200,6 @@
 						<a href="#contato"><img src="icons/mail.svg">CONTATO</a>
 					</li>
 				</ul>
-
 			</nav>
 
 			<article data-sr="enter top wait 1s" class="text-shadow">
@@ -219,7 +219,7 @@
 		<section id="portfolio" class="container">
 
 			<header>
-				<h1><img src="icons/rocket.svg" height="20"> PORTFÓLIO</h1>
+				<h1><img src="icons/rocket.svg" height="20"> PORTFÓLIO <small>alguns de meus trabalhos</small></h1>
 			</header>
 
 			<p>
@@ -406,9 +406,41 @@
 
 			<header>
 
-				<h1>Contato</h1>
+				<h1><img src="icons/mail.svg" height="20"> Contato <small>em que posso ajudar?</small></h1>
 
 			</header>
+
+			<article>
+
+				<form method="post" action="/contato.php" target="contatoframe">
+
+					<p>
+						<input type="text" name="nome" placeholder="Nome" autocomplete="off" required>
+					</p>
+
+					<p>
+						<input type="email" name="email" placeholder="E-mail" autocomplete="off" required>
+					</p>
+
+					<p>
+						<input type="text" name="assunto" placeholder="Assunto" autocomplete="off" required>
+					</p>
+
+					<p>
+						<textarea name="mensagem" placeholder="Mensagem" autocomplete="off" required></textarea>
+					</p>
+
+					<div class="position-relative">
+						<div class="g-recaptcha" data-sitekey="6LfgkQgTAAAAAE8ZHqKNBSvcIAupxrIvJhAbaKnY"></div>
+
+						<button type="submit">ENVIAR</button>
+					</div>
+
+				</form>
+
+				<iframe name="contatoframe" id="contatoframe" src="/contato.php"></iframe>
+
+			</article>
 
 		</section><!-- #contato -->
 

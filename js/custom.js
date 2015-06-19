@@ -6,18 +6,33 @@ function abrePortfolio( nome ) {
   document.getElementById('info' + nome ).style.display = "block";
 }
 
+// retorno formulário
+window.msgSent = function(response) {
+  if( response ) {
+    alert('Enviada com sucesso!');
+    return;
+  }
+  alert('Mensagem não enviada!');
+}
+
 $(document).ready(function() {
 
   /* NICE SCROLL */
   nice= $("html").niceScroll({
     cursorcolor : 'transparent',
-    cursorborder : '1px solid rgba(255,255,255,0.33)'
+    cursorborder: '1px solid rgba(255,255,255,0.33)'
+	});
+
+  $("textarea").niceScroll({
+    cursorcolor : 'transparent',
+    cursorborder: '1px solid rgba(255,255,255,0.33)',
+    autohidemode: false
 	});
 
   /* SCROLL REVEAL */
   window.sr= new scrollReveal({
     reset: true,
-    move: '50px',
+    move: '10px',
     mobile: true
   });
 
