@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<title>RobertoPC - Desenvolvedor Web</title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RobertoPC - Desenvolvedor Web Freelancer - Nova Iguaçu, RJ</title>
+
+	<meta name="description" content="Desenvolvedor web com mais de 5 anos de experiência e paixão pelo que faz. Trabalha com front-end e back-end."/>
+	<meta name="keywords" content="design web, desenvolvimento web, desenvolvedor, programador, freelancer, agência de publicidade, front-end, back-end, html, html5, css, css3, javascript, jquery, php, mysql, wordpress, bootstrap"/>
 
 	<link rel="shortcut icon" href="https://s.gravatar.com/avatar/59076cb7e11b7320dd48f7560b5be6e2?s=16">
 
 	<link href="http://fonts.googleapis.com/css?family=Orbitron:400,900" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
 </head>
 <body>
 	<canvas id="estrelas"></canvas>
 
-	<svg
-	   version="1.1"
-	   width="1500"
-	   height="1500"
-	   id="sistemasolar">
+	<!-- <div id="loading"></div> -->
+
+	<svg version="1.1" width="1500" height="1500" id="sistemasolar">
 		<style type="text/css">
 			@-webkit-keyframes translacao {
 				to {
@@ -32,61 +40,50 @@
 					transform: rotate(360deg);
 				}
 			}
-
-			#sistemasolar {
-				position: absolute;
-				top: 0;
-				left: 50%;
-				-webkit-transform: translate(-50%, -40%) scale(0.75);
-				transform: translate(-50%, -40%) scale(0.75);
-			}
-
 			.orbita {
 				fill: none;
 				stroke: #ffffff;
 				opacity: 0.75;
 			}
-
 			.planeta {
 				-webkit-animation: translacao 5s linear infinite;
 				animation: translacao 5s linear infinite;
 				-webkit-transform-origin: 750px 750px;
 				transform-origin: 750px 750px;
 			}
-
-			#mercurio { -webkit-animation-duration: 10s; 
-						animation-duration: 10s; 
+			#mercurio { -webkit-animation-duration: 10s;
+						animation-duration: 10s;
 			}
-			#venus { 
-				-webkit-animation-duration: 20s; 
-				animation-duration: 20s; 
+			#venus {
+				-webkit-animation-duration: 20s;
+				animation-duration: 20s;
 			}
 			#terra {
-				-webkit-animation-duration: 30s; 
+				-webkit-animation-duration: 30s;
 				animation-duration: 30s;
 			}
 			#marte {
-				-webkit-animation-duration: 40s; 
+				-webkit-animation-duration: 40s;
 				animation-duration: 40s;
 			}
 			#jupiter {
-				-webkit-animation-duration: 50s; 
+				-webkit-animation-duration: 50s;
 				animation-duration: 50s;
 			}
 			#saturno {
-				-webkit-animation-duration: 60s; 
+				-webkit-animation-duration: 60s;
 				animation-duration: 60s;
 			}
 			#urano {
-				-webkit-animation-duration: 70s; 
+				-webkit-animation-duration: 70s;
 				animation-duration: 70s;
 			}
 			#netuno {
-				-webkit-animation-duration: 80s; 
+				-webkit-animation-duration: 80s;
 				animation-duration: 80s;
 			}
 			#plutao {
-				-webkit-animation-duration: 90s; 
+				-webkit-animation-duration: 90s;
 				animation-duration: 90s;
 			}
 		</style>
@@ -184,43 +181,48 @@
 
 	<div id="container">
 
-		<header id="logo">
-			<h1>RobertoPC<br><small>Desenvolvedor Web</small></h1>
-		</header>
+		<section id="home">
 
-		<nav id="menu">
-			<ul>
-				<li>
-					<a href="#portifolio"><img src="icons/rocket.svg">PORTIFOLIO</a>
-				</li>
-				<li>
-					<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg">CURRICULO</a>
-				</li>
-				<!--li>
-					<a href="#"><img src="icons/wordpress.svg">BLOG</a>
-				</li-->
-				<li>
-					<a href="mailto:robertopc.prog@gmail.com"><img src="icons/mail.svg">CONTATO</a>
-				</li>
-			</ul>
-		</nav>
+			<header id="logo" data-sr="enter bottom wait 0.5s">
+				<h1>RobertoPC<br><small>Desenvolvedor Web<br><small>Freelancer</small></small></h1>
+			</header>
 
-		<nav id="icones">
-			<!--a href="http://facebook.com/robertopc0"><img src="icons/facebook.svg" alt="facebook"></a-->
-			<a href="http://twitter.com/robertopc0"><img src="icons/twitter.svg" alt="twitter"></a>
-			<a href="http://github.com/robertopc"><img src="icons/github.svg" alt="github"></a>
-			<!--a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg" alt="linkedin"></a-->
-			<!--a href="mailto:robertopc.prog@gmail.com&subject=Contato+Site"><img src="icons/mail.svg" alt="email"></a-->
-			<!--a href="#"><img src="icons/wordpress.svg" alt="blog"></a-->
-		</nav>
+			<nav id="menu" data-sr="enter bottom wait 0.5s">
+				<ul>
+					<li>
+						<a href="#portfolio"><img src="icons/rocket.svg">PORTFÓLIO</a>
+					</li>
+					<li>
+						<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg">CURRICULO</a>
+					</li>
+					<li>
+						<a href="mailto:robertopc.prog@gmail.com"><img src="icons/mail.svg">CONTATO</a>
+					</li>
+				</ul>
 
-		<section id="portifolio">
-			<h2><img src="icons/rocket.svg" height="20"> PORTIFOLIO</h2>
-			<p>
-				<a>Sites</a>
+			</nav>
+
+			<article data-sr="enter top wait 1s">
+				<p>Olá, me chamo Roberto e sou desenvolvedor web com mais de 5 anos de experiência e paixão pelo que faço.</p>
+				<p>Trabalho com front-end(HTML5, CSS3 e Javascript) e back-end(PHP e Wordpress).</p>
+				Têm algum projeto e precisa de alguém pra codificar? Pode contar comigo!
+			</article>
+
+			<nav id="icones" data-sr="enter top wait 1s">
+				<a href="http://twitter.com/robertopc0"><img src="icons/twitter.svg" alt="twitter"></a>
+				<a href="http://github.com/robertopc"><img src="icons/github.svg" alt="github"></a>
+				<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg" alt="linkedin"></a>
+			</nav>
+
+		</section><!-- #home -->
+
+		<section id="portfolio">
+			<h2 data-sr="wait 0.2s and then ease-in-out 100px"><img src="icons/rocket.svg" height="20"> PORTFÓLIO</h2>
+			<p data-sr="wait 0.2s and then ease-in-out 100px">
+				Sites
 			</p>
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('culturaltiger')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('culturaltiger')" data-sr="wait 0.2s and then ease-in-out 100px">
 					<defs>
 						<pattern id="culturaltiger" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/culturaltiger.png" x="5" y="8" width="54" height="32" />
@@ -236,7 +238,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('cursoats')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('cursoats')" data-sr="wait 0.2s and then ease-in-out 100px">
 					<defs>
 						<pattern id="cursoats" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/cursoats.png" x="5" y="8" width="54" height="32" />
@@ -252,7 +254,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('gruposeaplan')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('gruposeaplan')" data-sr="wait 0.2s and then ease-in-out 100px">
 					<defs>
 						<pattern id="gruposeaplan" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/gruposeaplan.png" x="5" y="8" width="54" height="32" />
@@ -269,7 +271,7 @@
 				</svg>
 			</p>
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('brunicbrindes')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('brunicbrindes')" data-sr="wait 0.2s and then ease-in-out 100px">
 					<defs>
 						<pattern id="brunicbrindes" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/brunicbrindes.png" x="5" y="8" width="54" height="32" />
@@ -285,7 +287,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortifolio('trifana')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('trifana')" data-sr="wait 0.2s and then ease-in-out 100px">
 					<defs>
 						<pattern id="trifana" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/trifana.jpg" x="5" y="8" width="54" height="32" />
@@ -301,11 +303,11 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 			</p>
-			<p>
-				<a>Aplicativos</a>
+			<p data-sr="wait 0.2s and then ease-in-out 100px">
+				Aplicativos
 			</p>
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="celular" onclick="javascript:abrePortifolio('tetrisfox')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="celular" onclick="javascript:abrePortfolio('tetrisfox')" data-sr="wait 0.2s and then ease-in-out 100px">
 					<defs>
 						<pattern id="tetrisfox" patternUnits="userSpaceOnUse" width="128" height="128">
 							<image xlink:href="thumbs/tetrisfox.png" x="14" y="14" width="32" height="32" />
@@ -325,6 +327,7 @@
 					 style="fill:#ffffff" />
 				</svg>
 			</p>
+
 			<div id="info">
 
 				<div id="infoculturaltiger">
@@ -388,48 +391,25 @@
 				</div>
 
 			</div>
-			<div id="topo">
+
+			<div id="topo" data-sr="wait 0.2s">
 				<a href="#" title="Ir para o topo"><img src="icons/up.svg" height="32"></a>
 			</div>
+
+		</section><!-- #portfolio -->
+
+		<section id="contato">
 		</section>
 
 	</div>
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src='js/jquery.scrollreveal.min.js'></script>
+	<script src="js/custom.js"></script>
+
 	<script>
 
-		function abrePortifolio( nome ) {
-			var paginas = ["culturaltiger","cursoats","gruposeaplan","brunicbrindes","trifana","tetrisfox"];
-			for( p in paginas) {
-				document.getElementById('info'+ paginas[p]).style.display = "none";
-			}
-			document.getElementById('info' + nome ).style.display = "block";
-		}
-		
-		/* Estrelas */
-		(function() {
-
-			var canvas        = document.getElementById('estrelas');
-				canvas.width  = window.screen.availWidth || window.screen.width;
-				canvas.height = window.screen.availHeight || window.screen.height;
-
-            var isVisible = document.getElementById('menu').offsetWidth > 0 || 
-                            document.getElementById('menu').offsetHeight > 0;
-
-
-            if( isVisible ) {
-                canvas.height *= 2.5;
-            }
-
-			var context = canvas.getContext('2d');
-
-			for( var i = 0; i < 1000; i++ ) {
-				x = Math.round( Math.random() * canvas.width );
-				y = Math.round( Math.random() * canvas.height );
-				context.fillStyle = "#ffffff";
-				context.fillRect( x, y, 1, 1 );
-			}
-		})();
-		
 		/* Google Analytics */
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -438,7 +418,7 @@
 
 		ga('create', 'UA-63040990-1', 'auto');
 		ga('send', 'pageview');
-		
+
 	</script>
 
 </body>
