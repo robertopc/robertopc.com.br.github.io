@@ -37,7 +37,7 @@ h2 {
 }
 
 .text-shadow {
-	text-shadow: 0 0 10px #fff;
+	text-shadow: 0 2px 8px #fff;
 }
 
 .hidden {
@@ -173,7 +173,6 @@ h2 {
 	}
 
 	#info p {
-		text-shadow: none;
 		font-family: Roboto, sans-serif;
 	}
 

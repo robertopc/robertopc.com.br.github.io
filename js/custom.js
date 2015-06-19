@@ -38,8 +38,6 @@ $(document).ready(function() {
         containerWidth = $('#container').width(),
         marginWidth = ( documentWidth - containerWidth ) / 2;
 
-        console.log( documentHeight +' - '+ sectionsHeight );
-
     canvas.attr( 'width', documentWidth );
     canvas.attr( 'height', sectionsHeight );
 
