@@ -178,26 +178,41 @@
 		 style="fill:#cccccc;fill-opacity:1;" />
 	</svg><!-- #sistemasolar -->
 
+	<nav id="menu-float" class="fixed hidden menu container ancora"></nav>
+
 	<div id="container">
 
 		<section id="home" class="container">
 
-			<header id="logo" data-sr="enter bottom wait 0.5s">
+			<header id="logo" data-sr="enter top">
 				<h1>RobertoPC<br><small>Desenvolvedor Web<br><small>Freelancer</small></small></h1>
 			</header>
 
-			<nav id="menu" data-sr="enter bottom wait 0.5s">
+			<nav id="menu" class="menu ancora" data-sr="enter bottom wait 0.5s">
+
 				<ul>
 					<li>
-						<a href="#portfolio"><img src="icons/rocket.svg">PORTFÓLIO</a>
+						<div class="hidden">
+							<h2>
+								RobertoPC<br><small>Desenvolvedor Web</small>
+							</h2>
+						</div>
 					</li>
+
 					<li>
-						<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg">CURRICULO</a>
+						<a href="#portfolio"><img src="icons/rocket.svg"><br>PORTFÓLIO</a>
 					</li>
+
 					<li>
-						<a href="#contato"><img src="icons/mail.svg">CONTATO</a>
+						<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg"><br>CURRICULO</a>
 					</li>
+
+					<li>
+						<a href="#contato"><img src="icons/mail.svg"><br>CONTATO</a>
+					</li>
+
 				</ul>
+
 			</nav>
 
 			<article data-sr="enter top wait 1s" class="text-shadow">
@@ -206,7 +221,7 @@
 				Têm algum projeto e precisa de alguém pra codificar? Pode contar comigo!
 			</article>
 
-			<nav id="icones" data-sr="wait 1s">
+			<nav id="icones" data-sr="enter bottom wait 0.5s">
 				<a href="http://twitter.com/robertopc0"><img src="icons/twitter.svg" alt="twitter"></a>
 				<a href="http://github.com/robertopc"><img src="icons/github.svg" alt="github"></a>
 				<a href="http://br.linkedin.com/in/robertopc0"><img src="icons/linkedin.svg" alt="linkedin"></a>
@@ -216,7 +231,7 @@
 
 		<section id="portfolio" class="container">
 
-			<header>
+			<header data-sr="enter top">
 				<h1><img src="icons/rocket.svg" height="20"> PORTFÓLIO <small>alguns de meus trabalhos</small></h1>
 			</header>
 
@@ -410,7 +425,7 @@
 
 			<article>
 
-				<form method="post" action="http://robertopc.net/contato.php" target="contatoframe">
+				<form id="contato-form">
 
 					<p>
 						<input type="text" name="nome" placeholder="Nome" autocomplete="off" required>
@@ -429,12 +444,11 @@
 					</p>
 
 					<div class="position-relative">
+						<span id="msg-form"></span>
 						<button type="submit">ENVIAR</button>
 					</div>
 
 				</form>
-
-				<iframe name="contatoframe" id="contatoframe" src="http://robertopc.net/contato.php"></iframe>
 
 			</article>
 
@@ -443,7 +457,7 @@
 	</div>
 
 	<!-- <div id="topo" data-sr="wait 0.2s"> -->
-	<div id="topo">
+	<div id="topo" class="hidden ancora">
 		<a href="#home" title="Ir para o topo"><img src="icons/up.svg" height="32"></a>
 	</div>
 

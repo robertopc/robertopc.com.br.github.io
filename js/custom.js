@@ -33,13 +33,15 @@ $(document).ready(function() {
   window.sr= new scrollReveal({
     reset: true,
     move: '10px',
-    mobile: true
+    mobile: false
   });
 
   // ajusta o tamanho de todas as seções
   $('section').each( function(){
 
-    $(this).height( $(window).height() - parseInt( $(this).css('padding-top') ) );
+    sectionHeight = $(window).height() - parseInt( $(this).css('padding-top') );
+
+    $(this).height( sectionHeight );
   });
 
 
@@ -73,8 +75,66 @@ $(document).ready(function() {
       $('html,body').animate({scrollTop: $(this).offset().top}, {duration: 1000});
   }
   //COLOCANDO EM TODOS LINKS QUE O HREF INICIA COM #
-  $('a[href^=#]').click(function() {
+  $('.ancora').delegate('a[href^=#]','click',function() {
       $( $(this).attr('href') ).ancora();
       return false;
+  });
+
+  // FUNCAO SCROLL
+  $(window).scroll(function() {
+
+      if( $(this).scrollTop() > 500 ) {
+
+        // menu flutuante scroll
+        $('#menu-float')
+        .html( $('#menu').html() )
+        .fadeIn('slow');
+
+        $('#topo').fadeIn('slow');
+
+      } else {
+
+        $('#menu-float').fadeOut('slow').html( '' );
+
+        $('#topo').fadeOut('slow');
+      }
+  });
+
+  // FORMULARIO DE CONTATO
+  $('#contato-form').submit(function( event ){
+    // previne o envio do form
+    event.preventDefault();
+
+    // desabilita submit e adiciona msg de "enviando..."
+    $(this).find('[type="submit"]').attr('disabled','true').html('Enviando...');
+
+    $.ajax({
+      type: 'post',
+      url: 'http://robertopc.net/contato.php',
+      data: $('#contato-form').serializeArray()
+    })
+    .done(function( msg ){
+
+      // reseta formulário
+      $('#contato-form')[0].reset();
+
+      // habilita submit e adiciona msg de "enviar"
+      $('#contato-form [type="submit"]').removeAttr('disabled').html('Enviar');
+
+      msg = $.parseJSON( msg );
+
+      // se mensagem enviada
+      if( msg[0].status == 'sent' ) {
+
+        $('#msg-form').html('Mensagem enviada!');
+
+      } else {
+
+        $('#msg-form').html('Mensagem NÃO enviada!');
+      }
+    })
+    .fail(function( jqXHR, textStatus ) {
+      console.log( "Request failed: " + textStatus );
+    });
   });
 });

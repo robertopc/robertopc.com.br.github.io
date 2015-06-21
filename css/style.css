@@ -1,247 +1,289 @@
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
+/*
+	1. ELEMENTOS
+		1.1 ATRIBUTOS
+	2. CLASSES
+	3. SECTIONS
+	4. RESPONSIVE
+	5. ATRIBUTOS
+*/
 
-body {
-	margin: 0;
-	padding: 0;
-	background: radial-gradient( rgba( 0, 0, 50, 1 ), rgba( 0, 0, 0, 1 ) );
-	color: #fff;
-	font-family: Orbitron, sans-serif;
-	font-weight: 400;
-	font-size: 16pt;
-	overflow: hidden;
-}
-a {
-	color: #fff;
-}
+/* 1. ELEMENTOS -----------------------------------------------*/
 
-a:hover {
-	text-decoration: none;
-}
+	*, *:before, *:after {
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;
+	}
 
-h1 {
-	font-weight: 900;
-	font-size: 32px;
-}
-
-h1 hr {
-	margin: 0;
-	border: 0;
-	height: 3px;
-	background: radial-gradient( rgba( 255, 255, 255, 0.8), rgba( 0, 0, 0, 0) );
-}
-
-h1 small {
-	font-weight: 400;
-}
-
-h2 {
-	font-size: 24px;
-}
-
-.text-shadow {
-	text-shadow: 0 0 5px #fff;
-}
-
-.hidden {
-	display: none;
-}
-
-.container {
-	position: relative;
-	float: left;
-	clear: both;
-	width: 960px;
-	height: auto;
-	marign: 0 auto;
-}
-
-.position-relative {
-	position: relative !important;
-}
-
-#container {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-}
-
-#loading {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	display: none;
-}
-
-#sistemasolar {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	-ms-transform: translate(-50%, -600px);
-	transform: translate(-50%, -600px);
-	max-width: 100%;
-}
-
-#home {
-	text-align: center;
-	padding-top: 200px;
-}
-
-#home article {
-	font-family: Roboto;
-	font-size: 18pt;
-	font-weight: 100;
-}
-
-#menu {
-	/*position: fixed;
-	bottom: 0;
-	left: 0;*/
-	width: 100%;
-	height: 100px;
-	line-height: 100px;
-	text-align: center;
-	word-spacing: 30px;
-	font-size: 24px;
-	z-index: 0;
-}
-
-	#menu a {
+	body {
+		margin: 0;
+		padding: 0;
+		background: radial-gradient( rgba( 0, 0, 50, 1 ), rgba( 0, 0, 0, 1 ) );
 		color: #fff;
+		font-family: Orbitron, sans-serif;
+		font-weight: 400;
+		font-size: 16pt;
+		overflow: hidden;
+	}
+	a {
+		color: #fff;
+	}
+
+	a:hover {
 		text-decoration: none;
 	}
 
-	#menu a:hover {
-		text-decoration: underline;
+	h1 {
+		font-weight: 900;
+		font-size: 32px;
 	}
 
-	#menu a img {
-		height: 18px;
-		margin-right: 10px;
+	h1 hr {
+		margin: 0;
+		border: 0;
+		height: 3px;
+		background: radial-gradient( rgba( 255, 255, 255, 0.8), rgba( 0, 0, 0, 0) );
 	}
 
-	#menu ul {
-		width: 100%;
-		padding: 0;
-	}
-	#menu ul li {
-		float: left;
-		width: 33%;
-		list-style-type: none;
-		text-align: center;
+	h1 small {
+		font-weight: 400;
 	}
 
-#icones {
-	text-align: center;
-	margin: 50px 0 0 0;
-}
+	h2 {
+		font-size: 24px;
+	}
 
-#icones img {
-	width: 48px;
-	height: 48px;
-	margin: 6px;
-}
+/* 1.1 ATRIBUTOS -----------------------------------------------*/
 
-#portfolio {
-	padding-top: 100px;
-}
+	[data-sr] {
+		visibility: hidden;
+	}
 
-.computador {
-	margin: 5px;
-}
+/* 2. CLASSES -------------------------------------------------*/
 
-.computador, .celular {
-	cursor: pointer;
-}
+	.text-shadow {
+		text-shadow: 0 0 5px #fff;
+	}
 
-#info {
-	position: absolute;
-	top: 0;
-	left: 40%;
-	width: 480px;
-	height: auto;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	text-align: center;
-}
-	#info div {
+	.hidden {
 		display: none;
 	}
 
-	#info p {
-		font-family: Roboto, sans-serif;
+	.container {
+		position: relative;
+		float: left;
+		clear: both;
+		width: 960px !important;
+		height: auto;
+		marign: 0 auto;
 	}
 
-	#info img {
-		border: #fff 1px solid;
+	.position-relative {
+		position: relative !important;
 	}
 
-	#info p img {
-		border: none;
+	.computador {
+		margin: 5px;
 	}
 
-#contato {
-		padding-top: 100px;
-}
-
-#contato article {
-		width: 50%;
-}
-
-#contato form input,
-#contato form button,
-#contato form textarea {
-	width: 100%;
-	background:transparent;
-	border: 1px solid #fff;
-	border-radius: 10px;
-	color: #fff;
-	padding: 10px;
-	font-family: Roboto;
-	font-size: 16pt;
-	-moz-resize: none;
-	resize: none;
-	outline: none;
-}
-	#contato form input:focus,
-	#contato form textarea:focus {
-		border-color: #00f;
-		outline: none;
+	.computador, .celular {
+		cursor: pointer;
 	}
-	#contato form textarea {
+
+	.fixed {
+		position:fixed;
+		top:0;
+	}
+
+/* 3. SECTIONS ------------------------------------------------*/
+
+	#menu-float {
+		left: 50%;
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		z-index: 2;
+	}
+		#menu-float ul li:first-child div {
+			display: block;
+			text-align: left;
+		}
+
+		#menu-float a img {
+			height: 22px;
+			margin-right: 10px;
+		}
+
+		#menu-float a br {
+			display: none;
+		}
+
+	.menu {
+		width: 100%;
 		height: 100px;
+		text-align: center;
+		font-size: 24px;
 	}
 
-#contato form button[type="submit"] {
+		.menu a {
+			color: #fff;
+			text-decoration: none;
+		}
+			.menu a:hover {
+			}
+			.menu a:hover img {
+
+				-webkit-animation: translacao 5s linear infinite;
+				animation: translacao 5s linear infinite;
+			}
+
+		.menu a img {
+			height: 48px;
+		}
+
+		.menu ul {
+			display:table;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		.menu ul li {
+			display:table-cell;
+			list-style-type: none;
+			text-align: center;
+		}
+
+	#container {
 		position: absolute;
 		top: 0;
-		right: 0;
-		background: #fff;
-		width: 33%;
-		color: #000;
-		font-weight: 900;
-		font-family: Orbitron;
-}
+		left: 50%;
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
 
-#contatoframe {
-	border: 0;
-	width: 0;
-	height: 0;
-}
+	#loading {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		display: none;
+	}
 
-#topo {
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-}
+	#sistemasolar {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		-ms-transform: translate(-50%, -600px);
+		transform: translate(-50%, -600px);
+		max-width: 100%;
+	}
+
+	#logo {
+	}
+
+	#home {
+		text-align: center;
+		padding-top: 200px;
+	}
+
+	#home article {
+		font-family: Roboto;
+		font-size: 18pt;
+		font-weight: 100;
+	}
+
+	#icones {
+		text-align: center;
+		margin: 50px 0 0 0;
+	}
+
+	#icones img {
+		width: 48px;
+		height: 48px;
+		margin: 6px;
+	}
+
+	#portfolio {
+		padding-top: 100px;
+	}
+
+	#info {
+		position: absolute;
+		top: 200px;
+		left: 40%;
+		width: 480px;
+		height: auto;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		text-align: center;
+	}
+		#info div {
+			display: none;
+		}
+
+		#info p {
+			font-family: Roboto, sans-serif;
+		}
+
+		#info img {
+			border: #fff 1px solid;
+		}
+
+		#info p img {
+			border: none;
+		}
+
+	#contato {
+		padding-top: 100px;
+	}
+
+	#contato article {
+		width: 50%;
+	}
+
+	#contato form input,
+	#contato form button,
+	#contato form textarea {
+		width: 100%;
+		background:transparent;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		color: #fff;
+		padding: 10px;
+		font-family: Roboto;
+		font-size: 16pt;
+		-moz-resize: none;
+		resize: none;
+		outline: none;
+	}
+		#contato form input:focus,
+		#contato form textarea:focus {
+			border-color: #00f;
+			outline: none;
+		}
+		#contato form textarea {
+			height: 100px;
+		}
+
+	#contato form button[type="submit"] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: #fff;
+			width: 33%;
+			color: #000;
+			font-weight: 900;
+			font-family: Orbitron;
+	}
+
+	#topo {
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+	}
+
+/* 4. RESPONSIVO ----------------------------------------------*/
 /*
 @media (max-width: 870px), (max-height: 600px) {
 
