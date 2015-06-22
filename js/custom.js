@@ -102,9 +102,11 @@ $(document).ready(function() {
     $.ajax({
       url: 'http://robertopc.net/contato.php',
       type: 'post',
+      crossDomain: true,
       data: $('#contato-form').serializeArray(),
-      success: function( msg) {
-
+      success: function( msg ) {
+        console.log( "Request success: "+ msg );
+        /*
         // reseta formulário
         $('#contato-form')[0].reset();
 
@@ -122,10 +124,22 @@ $(document).ready(function() {
 
           $('#msg-form').html('Mensagem NÃO enviada!');
         }
-
+        */
       },
       error: function( jqXHR, textStatus ) {
         console.log( "Request failed: "+ textStatus );
+      },
+      complete: function( jqXHR, textStatus ) {
+
+        console.log( "Request complete: "+ textStatus );
+
+        // reseta formulário
+        $('#contato-form')[0].reset();
+
+        // habilita submit e adiciona msg de "enviar"
+        $('#contato-form [type="submit"]').removeAttr('disabled').html('Enviar');
+
+        $('#msg-form').html('Mensagem enviada!');
       }
     });
   });
