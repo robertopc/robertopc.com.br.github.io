@@ -63,7 +63,11 @@ $(document).ready(function() {
 
   /* FUNCAO ANCORA */
   $.fn.ancora = function() {
+    // se o scrolltop for diferente
+    if( window.scrollY != $(this).offset().top ){
+
       $('html,body').animate({scrollTop: $(this).offset().top}, {duration: 1000});
+    }
   }
   //COLOCANDO EM TODOS LINKS QUE O HREF INICIA COM #
   $('.ancora').delegate('a[href^=#]','click',function() {
@@ -143,4 +147,18 @@ $(document).ready(function() {
       }
     });
   });
+
+  // centraliza tela no contato se formulário focado
+  $('#home a[href]').focus(function(){
+
+    // $(window).scrollTop(0);
+    $('#home').ancora();
+  });
+
+  // centraliza tela no contato se formulário focado
+  $('#contato-form input').focus(function(){
+
+    $('#contato').ancora();
+  });
 });
+console.log("1");
