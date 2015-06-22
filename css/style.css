@@ -39,7 +39,7 @@
 	}
 
 	a:hover {
-		text-decoration: none;
+		color: yellow;
 	}
 
 	h1 {
@@ -121,9 +121,10 @@
 			text-align: left;
 		}
 
-		#menu-float a img {
+		#menu-float a svg {
 			height: 22px;
-			margin-right: 10px;
+			width: 22px;
+			margin-right: 5px;
 		}
 
 		#menu-float a br {
@@ -138,15 +139,12 @@
 	}
 
 		.menu a {
-			color: #fff;
 			text-decoration: none;
 		}
-			.menu a:hover {
-			}
-			.menu a:hover img {
-
-				-webkit-animation: translacao 5s linear infinite;
-				animation: translacao 5s linear infinite;
+			.menu a:hover path {
+				stroke: yellow;
+				/*-webkit-animation: translacao 5s linear infinite;*/
+				/*animation: translacao 5s linear infinite;*/
 			}
 
 		.menu a img {
@@ -214,8 +212,14 @@
 	#icones img {
 		width: 48px;
 		height: 48px;
-		margin: 6px;
+		margin: 8px;
 	}
+
+		#icones img:hover {
+			width: 64px;
+			height: 64px;
+			margin: 0;
+		}
 
 	#portfolio {
 		padding-top: 100px;
