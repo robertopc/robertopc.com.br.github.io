@@ -6,15 +6,6 @@ function abrePortfolio( nome ) {
   document.getElementById('info' + nome ).style.display = "block";
 }
 
-// retorno formulário
-window.msgSent = function(response) {
-  if( response ) {
-    alert('Enviada com sucesso!');
-    return;
-  }
-  alert('Mensagem não enviada!');
-}
-
 $(document).ready(function() {
 
   /* NICE SCROLL */
@@ -109,32 +100,33 @@ $(document).ready(function() {
     $(this).find('[type="submit"]').attr('disabled','true').html('Enviando...');
 
     $.ajax({
-      type: 'post',
       url: 'http://robertopc.net/contato.php',
-      data: $('#contato-form').serializeArray()
-    })
-    .done(function( msg ){
+      type: 'post',
+      data: $('#contato-form').serializeArray(),
+      success: function( msg) {
 
-      // reseta formulário
-      $('#contato-form')[0].reset();
+        // reseta formulário
+        $('#contato-form')[0].reset();
 
-      // habilita submit e adiciona msg de "enviar"
-      $('#contato-form [type="submit"]').removeAttr('disabled').html('Enviar');
+        // habilita submit e adiciona msg de "enviar"
+        $('#contato-form [type="submit"]').removeAttr('disabled').html('Enviar');
 
-      msg = $.parseJSON( msg );
+        msg = $.parseJSON( msg );
 
-      // se mensagem enviada
-      if( msg[0].status == 'sent' ) {
+        // se mensagem enviada
+        if( msg[0].status == 'sent' ) {
 
-        $('#msg-form').html('Mensagem enviada!');
+          $('#msg-form').html('Mensagem enviada!');
 
-      } else {
+        } else {
 
-        $('#msg-form').html('Mensagem NÃO enviada!');
+          $('#msg-form').html('Mensagem NÃO enviada!');
+        }
+
+      },
+      error: function( jqXHR, textStatus ) {
+        console.log( "Request failed: "+ textStatus );
       }
-    })
-    .fail(function( jqXHR, textStatus ) {
-      console.log( "Request failed: " + textStatus );
     });
   });
 });
