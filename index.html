@@ -103,7 +103,7 @@
 		</style>
 		<defs>
 			<pattern id="avatar" patternUnits="userSpaceOnUse" width="100" height="100">
-				<image xlink:href="https://s.gravatar.com/avatar/59076cb7e11b7320dd48f7560b5be6e2?s=100" x="0" y="0" width="100" height="100" />
+				<image xlink:href="https://s.gravatar.com/avatar/59076cb7e11b7320dd48f7560b5be6e2?s=100" x="0" y="0" width="100" height="100" itemprop="img" />
 			</pattern>
 		</defs>
 	  <path
@@ -199,8 +199,8 @@
 
 		<section id="home" class="container">
 
-			<header id="logo" data-sr="enter top">
-				<h1>RobertoPC<br><small>Desenvolvedor Web<br><small>Freelancer</small></small></h1>
+			<header id="logo" data-sr="enter top" itemscope itemtype="http://data-vocabulary.org/Person">
+				<a href="http://www.robertopc.com.br" itemprop="url"><h1><span itemprop="nickname"><span itemprop="name">Roberto</span>PC</span><br><small><span itemprop="jobTitle">Desenvolvedor Web</span><br><small>Freelancer</small></small></h1></a>
 			</header>
 
 			<nav id="menu" class="menu ancora" data-sr="enter bottom wait 0.5s">
@@ -242,7 +242,7 @@
 			<article data-sr="enter top wait 1s" class="text-shadow">
 				<p>Olá, me chamo Roberto e sou desenvolvedor web com mais de 5 anos de experiência e paixão pelo que faço.</p>
 				<p>Trabalho com front-end(HTML5, CSS3 e Javascript) e back-end(PHP e Wordpress).</p>
-				Têm algum projeto e precisa de alguém pra codificar? Pode contar comigo!
+				<p>Têm algum projeto e precisa de alguém pra codificar? Pode contar comigo!</p>
 			</article>
 
 			<nav id="icones" data-sr="enter bottom wait 0.5s">
@@ -473,6 +473,10 @@
 					</div>
 
 				</form>
+
+				<p>
+					...ou pelo e-mail <a href="mailto:robertopc.prog@gmail.com" itemprop="email">robertopc.prog@gmail.com</a>
+				</p>
 
 			</article>
 
