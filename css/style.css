@@ -8,6 +8,10 @@
 */
 
 /* 1. ELEMENTOS -----------------------------------------------*/
+/* Removida linha externa inputs bootstrap */
+	:focus {
+		outline: #ff0 1px dotted;
+	}
 
 	::-moz-selection {
     background: yellow;
@@ -109,6 +113,10 @@
 	.fixed {
 		position:fixed;
 		top:0;
+	}
+
+	.no-focus {
+		outline: none;
 	}
 
 /* 3. SECTIONS ------------------------------------------------*/
@@ -278,6 +286,13 @@
 		z-index: 3;
 		font-family: Roboto, sans-serif;
 	}
+		#info big {
+			font-family: Orbitron;
+		}
+
+		#info a {
+			font-size: 20px;
+		}
 
 		.info {
 			display: none;
