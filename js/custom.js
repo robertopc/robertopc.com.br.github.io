@@ -1,39 +1,52 @@
 $(document).ready(function() {
 
+  var d              = document,
+      w              = window,
+      documentWidth  = $( d ).width(),
+      documentHeight = $( d ).height(),
+      sectionsTop    = [],
+      sectionsHeight = 0,
+      canvas         = $('#estrelas'),
+      context        = canvas[0].getContext('2d'),
+      containerWidth = $('#container').width(),
+      marginWidth    = ( documentWidth - containerWidth ) / 2;
+
   $('#loading').fadeOut(1000);
 
   // ajusta o tamanho de todas as seções
-  $('section').each( function(){
+  $('section:visible').each( function(){
 
-    sectionHeight = $(window).height() - parseInt( $(this).css('padding-top') );
+    sectionHeight = $(w).height() - parseInt( $(this).css('padding-top') );
 
     $(this).height( sectionHeight );
+
+    sectionsTop.push( $(this).offset().top );
+    sectionsHeight += $(this).innerHeight();
   });
 
   // ao clicar no portfolio
   $('.abre-portfolio').click(function(){
 
-    // esconde divs
-    $('.info:visible').hide();
+    var portfolio = $(this).data('portfolio'),
+        id = '#info-'+ portfolio;
 
-    // insere a imagem
-    $( '#info-'+ $(this).data('portfolio') + ' .img-big' ).attr('src','prints/'+ $(this).data('portfolio') + '.jpg');
+    // carrega imagem zoom & informações
+    $( '#info-img' )
+    .attr('src','prints/'+ portfolio + '.jpg')
+    .one("load", function() {
 
-    // mostra a imagem
-    $( '#info-'+ $(this).data('portfolio') ).fadeIn('slow');
+      $('#info-right').html( $( id ).html() );
+      $('#info').fadeIn('slow');
+    });
+
+    // botão fechar
+    $( '#info-close' ).click(function(){
+
+      $('#info').fadeOut('slow');
+    });
   });
 
   /* ESTRELAS */
-
-    var d = document,
-        w = window,
-        documentWidth  = $( d ).width(),
-        documentHeight = $( d ).height(),
-        sectionsHeight = $('section:visible').length * $( w ).height(),
-        canvas = $('#estrelas'),
-        context = canvas[0].getContext('2d'),
-        containerWidth = $('#container').width(),
-        marginWidth = ( documentWidth - containerWidth ) / 2;
 
     canvas.attr( 'width', documentWidth );
     canvas.attr( 'height', sectionsHeight );
@@ -55,7 +68,21 @@ $(document).ready(function() {
     // se o scrolltop for diferente
     if( w.scrollY != $(this).offset().top ){
 
-      $('html,body').animate({scrollTop: $(this).offset().top}, {duration: 1000});
+      // se não estiver com uma animação de scroll ativa
+      if( ! $('body').hasClass('scrolling') ) {
+
+        $('body').addClass('scrolling');
+
+        $('html,body').animate({
+          scrollTop: $(this).offset().top
+        },
+        {
+          duration: 1000,
+          complete : function(){
+            $('body').removeClass('scrolling')
+          }
+        });
+      }
     }
   }
   //COLOCANDO EM TODOS LINKS QUE O HREF INICIA COM #
@@ -67,13 +94,16 @@ $(document).ready(function() {
   // FUNCAO SCROLL
   $(w).scroll(function() {
 
+    // console.log( 'window scrollTop: '+ $(w).scrollTop() );
+    // console.log( 'sections height: '+ sectionsTop );
+
     // bloqueia scroll horizontal
-    if( $(this).scrollLeft() > 0 ){
-      $(this).scrollLeft(0);
+    if( $(w).scrollLeft() > 0 ){
+      $(w).scrollLeft(0);
     }
 
-    // se scroll vertical passar de 500px
-    if( $(this).scrollTop() > 500 ) {
+    // se scroll vertical passar da altura da section
+    if( $(w).scrollTop() > $('#home').innerHeight() ) {
 
       // menu flutuante scroll
       $('#menu-float')
@@ -153,13 +183,13 @@ $(document).ready(function() {
   });*/
 
   // quando seção focada centraliza tela nela
-  $('section *').focus(function(){
+  //$('section *').focus(function(){
 
-    console.log($.fn);
-    console.log($(this).parentsUntil('section'));
-    console.log($(this).parents());
-    console.log($(this).parent());
+    // console.log($.fn);
+    // console.log($(this).parentsUntil('section'));
+    // console.log($(this).parents());
+    // console.log($(this).parent());
 
     // $( this.parent('section').attr('id') ).ancora();
-  });
+  //});
 });
