@@ -1,31 +1,6 @@
-function abrePortfolio( nome ) {
-  var paginas = ["culturaltiger","cursoats","gruposeaplan","brunicbrindes","trifana","tetrisfox"];
-  for( p in paginas) {
-    document.getElementById('info'+ paginas[p]).style.display = "none";
-  }
-  document.getElementById('info' + nome ).style.display = "block";
-}
-
 $(document).ready(function() {
 
-  /* NICE SCROLL */
-  nice= $("html").niceScroll({
-    cursorcolor : 'transparent',
-    cursorborder: '1px solid rgba(255,255,255,0.33)'
-	});
-
-  $("textarea").niceScroll({
-    cursorcolor : 'transparent',
-    cursorborder: '1px solid rgba(255,255,255,0.33)',
-    autohidemode: false
-	});
-
-  /* SCROLL REVEAL */
-  window.sr= new scrollReveal({
-    reset: true,
-    move: '10px',
-    mobile: false
-  });
+  $('#loading').fadeOut(1000);
 
   // ajusta o tamanho de todas as seções
   $('section').each( function(){
@@ -35,12 +10,26 @@ $(document).ready(function() {
     $(this).height( sectionHeight );
   });
 
+  // ao clicar no portfolio
+  $('.abre-portfolio').click(function(){
+
+    // esconde divs
+    $('.info:visible').hide();
+
+    // insere a imagem
+    $( '#info-'+ $(this).data('portfolio') + ' .img-big' ).attr('src','prints/'+ $(this).data('portfolio') + '.jpg');
+
+    // mostra a imagem
+    $( '#info-'+ $(this).data('portfolio') ).fadeIn('slow');
+  });
 
   /* ESTRELAS */
 
-    var documentWidth  = $( document ).width(),
-        documentHeight = $( document ).height(),
-        sectionsHeight = $('section:visible').length * $( window ).height(),
+    var d = document,
+        w = window,
+        documentWidth  = $( d ).width(),
+        documentHeight = $( d ).height(),
+        sectionsHeight = $('section:visible').length * $( w ).height(),
         canvas = $('#estrelas'),
         context = canvas[0].getContext('2d'),
         containerWidth = $('#container').width(),
@@ -64,7 +53,7 @@ $(document).ready(function() {
   /* FUNCAO ANCORA */
   $.fn.ancora = function() {
     // se o scrolltop for diferente
-    if( window.scrollY != $(this).offset().top ){
+    if( w.scrollY != $(this).offset().top ){
 
       $('html,body').animate({scrollTop: $(this).offset().top}, {duration: 1000});
     }
@@ -76,7 +65,7 @@ $(document).ready(function() {
   });
 
   // FUNCAO SCROLL
-  $(window).scroll(function() {
+  $(w).scroll(function() {
 
       if( $(this).scrollTop() > 500 ) {
 
@@ -93,7 +82,8 @@ $(document).ready(function() {
 
         $('#topo').fadeOut('slow');
       }
-  });
+  })
+  .scroll();
 
   // FORMULARIO DE CONTATO
   $('#contato-form').submit(function( event ){
@@ -149,16 +139,21 @@ $(document).ready(function() {
   });
 
   // centraliza tela no contato se formulário focado
-  $('#home a[href]').focus(function(){
+  /*$('#home a').focus(function( event ){
+    console.log(event);
+    // $('#home').ancora();
 
-    // $(window).scrollTop(0);
-    $('#home').ancora();
-  });
+    $.scrollTo('#home', 1000);
+  });*/
 
-  // centraliza tela no contato se formulário focado
-  $('#contato-form input').focus(function(){
+  // quando seção focada centraliza tela nela
+  $('section *').focus(function(){
 
-    $('#contato').ancora();
+    console.log($.fn);
+    console.log($(this).parentsUntil('section'));
+    console.log($(this).parents());
+    console.log($(this).parent());
+
+    // $( this.parent('section').attr('id') ).ancora();
   });
 });
-console.log("1");

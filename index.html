@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="no-js" lang="pt-BR">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,11 @@
 	<link href="http://fonts.googleapis.com/css?family=Orbitron:400,900" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet" type="text/css">
 
+	<script>
+		// verifica se o js está ativado
+		document.documentElement.className = "js";
+	</script>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<!--[if lt IE 9]>
@@ -38,9 +43,10 @@
 	<![endif]-->
 </head>
 <body class="gradient">
-	<canvas id="estrelas"></canvas>
 
-	<!-- <div id="loading"></div> -->
+	<noscript>Aviso: para o funcionamento deste site, o Javascript deve estar ativo.</noscript>
+
+	<canvas id="estrelas" width="0" height="0"></canvas>
 
 	<svg version="1.1" width="1500" height="1500" id="sistemasolar">
 		<style type="text/css">
@@ -200,7 +206,7 @@
 		<section id="home" class="container">
 
 			<header id="logo" data-sr="enter top" itemscope itemtype="http://data-vocabulary.org/Person">
-				<h1><span itemprop="nickname"><a href="http://www.robertopc.com.br" itemprop="url"><span itemprop="name">Roberto</span>PC</span></a><br><small><span itemprop="jobTitle">Desenvolvedor Web</span><br><small>Freelancer</small></small></h1>
+				<h1><span itemprop="nickname"><a href="http://www.robertopc.com.br" itemprop="url"><span itemprop="name">Roberto</span>PC</span></a><hr><small><span itemprop="jobTitle">Desenvolvedor Web</span><br><small>Freelancer</small></small></h1>
 			</header>
 
 			<nav id="menu" class="menu ancora" data-sr="enter bottom wait 0.5s">
@@ -239,24 +245,33 @@
 
 			</nav>
 
-			<article data-sr="enter top wait 1s" class="text-shadow">
-				<p>Olá, me chamo Roberto e sou desenvolvedor web com mais de 5 anos de experiência e paixão pelo que faço.</p>
+			<article id="descricao" data-sr="enter top wait 1s" class="text-shadow ancora">
+				<p>Olá, me chamo Roberto e sou desenvolvedor web com mais de<br>5 anos de experiência e paixão pelo que faço.</p>
 				<p>Trabalho com front-end(HTML5, CSS3 e Javascript) e back-end(PHP e Wordpress).</p>
-				<p>Têm algum projeto e precisa de alguém pra codificar? Pode contar comigo!</p>
+				<p>Têm algum projeto e precisa de alguém pra codificar? <a href="#contato">Entre em contato</a>.</p>
 			</article>
 
 			<nav id="icones" data-sr="enter bottom wait 0.5s">
-				<a href="http://twitter.com/robertopc0"><img src="img/twitter.svg" alt="twitter" title="Twitter"></a>
-				<a href="http://github.com/robertopc"><img src="img/github.svg" alt="github" title="Github"></a>
-				<a href="http://br.linkedin.com/in/robertopc0"><img src="img/linkedin.svg" alt="linkedin" title="Linkedin"></a>
+				<!-- Twitter -->
+				<a href="http://twitter.com/robertopc0" target="_blank"><svg version="1.1" width="64" height="64" viewBox="0 0 64 64" alt=><path d="M 32,0.969697 C 14.862545,0.969697 0.96969698,14.862545 0.96969698,32 0.96969698,49.137455 14.862545,63.030303 32,63.030303 49.137455,63.030303 63.030303,49.137455 63.030303,32 63.030303,14.862545 49.137455,0.969697 32,0.969697 Z m 15.42303,23.120485 c 0.01552,0.341333 0.02327,0.684606 0.02327,1.029818 0,10.515394 -8.003879,22.641455 -22.641455,22.641455 -4.493575,0 -8.676848,-1.317819 -12.198787,-3.575273 0.622545,0.0737 1.255757,0.111515 1.898666,0.111515 3.728485,0 7.159273,-1.272242 9.883152,-3.406545 -3.482182,-0.064 -6.421334,-2.365091 -7.433697,-5.526304 0.485818,0.09309 0.984242,0.143516 1.497212,0.143516 0.725333,0 1.429333,-0.09794 2.096485,-0.279273 -3.640243,-0.731152 -6.383515,-3.947636 -6.383515,-7.803152 0,-0.03394 0,-0.06691 9.69e-4,-0.09988 1.072485,0.596363 2.300122,0.954181 3.604364,0.994909 -2.135273,-1.427394 -3.540364,-3.862303 -3.540364,-6.624 0,-1.458425 0.392728,-2.825697 1.077334,-4.00097 3.925333,4.814545 9.788121,7.982545 16.402424,8.314182 -0.135758,-0.582788 -0.205576,-1.189818 -0.205576,-1.813334 0,-4.394666 3.563637,-7.957333 7.957333,-7.957333 2.288485,0 4.356849,0.966788 5.808485,2.512485 1.812364,-0.356848 3.516122,-1.019152 5.053091,-1.930667 -0.594424,1.85794 -1.856,3.418182 -3.498666,4.402425 1.609697,-0.192 3.143757,-0.619637 4.570181,-1.252849 -1.066666,1.595152 -2.415515,2.997333 -3.970909,4.119273 z" fill="none" stroke="white" stroke-width="2"></path></svg></a>
+
+				<a href="http://github.com/robertopc" target="_blank"><svg version="1.1" width="64" height="64" viewBox="0 0 64 64"><path d="m 32.00143,2.315803 c -16.809461,0 -30.4408109,13.627544 -30.4408109,30.439859 0,13.448711 8.7219719,24.858903 20.8170599,28.884573 1.521042,0.28157 2.080374,-0.660164 2.080374,-1.463966 0,-0.7258 -0.02854,-3.12389 -0.04185,-5.667522 -8.46894,1.841612 -10.255379,-3.591903 -10.255379,-3.591903 -1.384063,-3.518658 -3.379777,-4.453732 -3.379777,-4.453732 -2.761466,-1.889173 0.208324,-1.850173 0.208324,-1.850173 3.056351,0.214982 4.665859,3.137208 4.665859,3.137208 2.715806,4.653494 7.121024,3.307482 8.85895,2.530314 0.273008,-1.967177 1.061591,-3.310335 1.932931,-4.070381 -6.761457,-0.769557 -13.869164,-3.379775 -13.869164,-15.043948 0,-3.323652 1.189056,-6.038508 3.136257,-8.17025 -0.315814,-0.766703 -1.35838,-3.863008 0.293934,-8.056099 0,0 2.556948,-0.818071 8.372864,3.121037 2.427579,-0.674432 5.032089,-1.013076 7.619478,-1.024492 2.586437,0.01142 5.192849,0.35006 7.625185,1.024492 5.810208,-3.938157 8.3624,-3.121037 8.3624,-3.121037 1.65707,4.193091 0.615456,7.289396 0.299643,8.056099 1.951004,2.131742 3.132451,4.847549 3.132451,8.17025 0,11.691759 -7.121025,14.265829 -13.899601,15.019217 1.092029,0.944586 2.064203,2.796662 2.064203,5.637081 0,4.073233 -0.0352,7.351226 -0.0352,8.353839 0,0.810462 0.547917,1.759804 2.090837,1.460163 12.088426,-4.029477 20.798983,-15.435863 20.798983,-28.88077 0,-16.812315 -13.628497,-30.439859 -30.439861,-30.439859 z" fill="none" stroke="white" stroke-width="2"></path></svg></a>
+
+				<a href="http://br.linkedin.com/in/robertopc0" target="_blank"><svg version="1.1" width="64" height="64" viewBox="0 0 64 64"><path d="m 22,52 -8,0 0,-28 8,0 z M 18,20 c -2.209,0 -4,-1.791 -4,-4 0,-2.209 1.791,-4 4,-4 2.209,0 4,1.791 4,4 0,2.209 -1.791,4 -4,4 z m 32,32 -8,0 0,-16 c 0,-2.209 -1.791,-4 -4,-4 -2.209,0 -4,1.791 -4,4 l 0,16 -8,0 0,-28 8,0 0,4.967 C 35.65,26.7 38.172,24 41,24 c 4.971,0 9,4.477 9,10 z M 32,0.969697 C 14.862545,0.969697 0.96969699,14.862545 0.96969699,32 0.96969699,49.137455 14.862545,63.030303 32,63.030303 49.137455,63.030303 63.030303,49.137455 63.030303,32 63.030303,14.862545 49.137455,0.969697 32,0.969697 Z" fill="none" stroke="white" stroke-width="2"></path></svg></a>
+
+				<a href="skype:robertopcskype?chat"><svg version="1.1" width="64" height="64" viewBox="0 0 64 64"><path d="m 60.078545,35.996606 c 0.170667,-1.260606 0.268607,-2.542546 0.268607,-3.846788 0,-15.654788 -12.760243,-28.3481211 -28.497455,-28.3481211 -1.564121,0 -3.097212,0.128 -4.589576,0.3733334 -2.675394,-1.7435152 -5.859879,-2.7597576 -9.285818,-2.7597576 -9.3963636,0 -17.00460602,7.6130905 -17.00460602,17.0065453 0,3.418182 1.00557572,6.59297 2.73842422,9.259636 -0.233697,1.456485 -0.3529697,2.947879 -0.3529697,4.467394 0,15.657697 12.7534545,28.349091 28.4955155,28.349091 1.776485,0 3.506424,-0.172606 5.187878,-0.477091 2.612364,1.620364 5.689213,2.563879 8.987152,2.563879 9.394424,0 17.004606,-7.61503 17.004606,-17.007515 0,-3.55103 -1.086061,-6.851879 -2.950788,-9.580606 z m -25.56509,17.046303 c -9.055031,0.471273 -13.292607,-1.532121 -17.174303,-5.174303 -4.335516,-4.068849 -2.59394,-8.709818 0.938666,-8.945455 3.529697,-0.235636 5.649455,4.00194 7.533576,5.180121 1.882182,1.174304 9.041454,3.849697 12.823273,-0.474181 4.118303,-4.706909 -2.738425,-7.141819 -7.764364,-7.878788 -7.175758,-1.062788 -16.236606,-4.944485 -15.531636,-12.594424 0.704969,-7.645091 6.49503,-11.565576 12.587636,-12.118303 7.767273,-0.70497 12.823273,1.176242 16.822303,4.588606 4.624485,3.942787 2.121697,8.35103 -0.824242,8.705939 -2.934303,0.35297 -6.230303,-6.485333 -12.702061,-6.588121 -6.669576,-0.104728 -11.177697,6.941091 -2.944,8.943515 8.238545,2.000485 17.060849,2.822788 20.237576,10.353454 3.179636,7.531637 -4.939637,15.530667 -14.002424,16.00194 z" fill="none" stroke="white" stroke-width="2"></path></svg></a>
+
+				<a href="mailto:robertopc.prog@gmail.com">
+				<!-- mail --><svg version="1.1" width="48" height="48" viewBox="0 0 64 64"><path d="m 8.1860445,8.184558 47.6279065,0 c 0.849861,0 1.674419,0.18307 2.432,0.526884 L 31.999998,39.331721 5.7540442,8.711442 C 6.5116252,8.367628 7.3361835,8.184558 8.1860445,8.184558 Z m -5.9534893,41.674419 0,-35.72093 c 0,-0.125024 0.006,-0.248558 0.0134,-0.372093 L 19.703068,34.132837 2.4379502,51.397953 C 2.3039972,50.900837 2.2325552,50.38586 2.2325552,49.858977 Z m 53.5813958,5.953488 -47.6279065,0 c -0.525396,0 -1.041861,-0.07144 -1.5389773,-0.205395 l 16.9406518,-16.940651 8.410791,9.814325 8.41079,-9.812837 16.940651,16.94214 z m 5.953489,-5.953488 c 0,0.525395 -0.07144,1.04186 -0.205395,1.538976 L 44.296928,34.132837 61.754045,13.765954 c 0.0074,0.123535 0.0134,0.247069 0.0134,0.372093 z" fill="none" stroke="white" stroke-width="3"></path></svg><!-- mail -->
+				</a>
 			</nav>
 
 		</section><!-- #home -->
 
 		<section id="portfolio" class="container">
 
-			<header data-sr="enter top">
-				<h1><img src="img/rocket.svg" height="32" alt="portfolio"> PORTFÓLIO <small>alguns de meus trabalhos</small></h1>
+			<header>
+				<h1>PORTFÓLIO <small>alguns de meus trabalhos</small></h1>
 			</header>
 
 			<p>
@@ -264,7 +279,7 @@
 			</p>
 
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('culturaltiger')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador abre-portfolio" data-portfolio="cultural-tiger">
 					<defs>
 						<pattern id="culturaltiger" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/culturaltiger.png" x="5" y="8" width="54" height="32" />
@@ -280,7 +295,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('cursoats')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador abre-portfolio" data-portfolio="curso-ats">
 					<defs>
 						<pattern id="cursoats" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/cursoats.png" x="5" y="8" width="54" height="32" />
@@ -296,7 +311,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('gruposeaplan')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador abre-portfolio" data-portfolio="grupo-seaplan">
 					<defs>
 						<pattern id="gruposeaplan" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/gruposeaplan.png" x="5" y="8" width="54" height="32" />
@@ -314,7 +329,7 @@
 			</p>
 
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('brunicbrindes')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador abre-portfolio" data-portfolio="brunic-brindes">
 					<defs>
 						<pattern id="brunicbrindes" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/brunicbrindes.png" x="5" y="8" width="54" height="32" />
@@ -330,7 +345,7 @@
 					<path d="M0 4v40h64v-40h-64zM60 40h-56v-32h56v32zM42 48h-20l-2 8-4 4h32l-4-4z" fill="#ffffff"></path>
 				</svg>
 
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador" onclick="javascript:abrePortfolio('trifana')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="computador abre-portfolio" data-portfolio="trifana">
 					<defs>
 						<pattern id="trifana" patternUnits="userSpaceOnUse" width="100" height="100">
 							<image xlink:href="thumbs/trifana.jpg" x="5" y="8" width="54" height="32" />
@@ -352,7 +367,7 @@
 			</p>
 
 			<p>
-				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="celular" onclick="javascript:abrePortfolio('tetrisfox')">
+				<svg version="1.1" width="96" height="96" viewBox="0 0 64 64" class="celular abre-portfolio" data-portfolio="tetrisfox">
 					<defs>
 						<pattern id="tetrisfox" patternUnits="userSpaceOnUse" width="128" height="128">
 							<image xlink:href="thumbs/tetrisfox.png" x="14" y="14" width="32" height="32" />
@@ -375,64 +390,111 @@
 
 			<div id="info">
 
-				<div id="infoculturaltiger">
+				<div id="info-cultural-tiger" class="info">
+
+					<img class="img-big">
+
 					<h3>Cultural Tiger</h3>
 
-					<img src="prints/cultural-tiger.jpg" alt="Site Cultural Tiger">
-
-					<p><a href="http://www.culturaltiger.com.br" target="_blank">www.culturaltiger.com.br <img src="img/new-tab.svg" height="16"></a></p>
+					<p>
+						<a href="http://www.culturaltiger.com.br" target="_blank">www.culturaltiger.com.br
+						<!-- new-tab --><svg version="1.1" width="16" height="16" viewBox="0 0 64 64"><path d="M12 4v48h48v-48h-48zM56 48h-40v-40h40v40zM8 56v-42l-4-4v50h50l-4-4h-42z" fill="#ffffff"></path><path d="M22 16l10 10-12 12 6 6 12-12 10 10v-26z" fill="#ffffff"></path></svg><!-- new-tab -->
+						</a>
+					</p>
 					<p>Site da empresa Cultural Tiger.</p>
-					<p><small><img src="img/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, CODEIGNITER</small></p>
+					<p>
+						<!-- embed --><svg version="1.1" width="28" height="20" viewBox="0 0 80 64"><path d="M52 46l6 6 20-20-20-20-6 6 14 14z" fill="#ffffff"></path><path d="M28 18l-6-6-20 20 20 20 6-6-14-14z" fill="#ffffff"></path><path d="M43.831 9.407l4.342 1.184-11.999 44.002-4.342-1.184 11.999-44.002z" fill="#ffffff"></path></svg><!-- embed -->
+						<small>PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, CODEIGNITER</small>
+					</p>
 				</div>
 
-				<div id="infocursoats">
+				<div id="info-curso-ats" class="info">
+
+					<img class="img-big">
+
 					<h3>Curso ATS</h3>
 
-					<img src="prints/colegio-curso-ats.jpg" alt="Site Colégio Curso Ats">
-
-					<p><a href="http://www.cursoats.com.br" target="_blank">www.cursoats.com.br <img src="img/new-tab.svg" height="16"></a></p>
+					<p>
+						<a href="http://www.cursoats.com.br" target="_blank">www.cursoats.com.br
+						<!-- new-tab --><svg version="1.1" width="16" height="16" viewBox="0 0 64 64"><path d="M12 4v48h48v-48h-48zM56 48h-40v-40h40v40zM8 56v-42l-4-4v50h50l-4-4h-42z" fill="#ffffff"></path><path d="M22 16l10 10-12 12 6 6 12-12 10 10v-26z" fill="#ffffff"></path></svg><!-- new-tab -->
+						</a>
+					</p>
 					<p>Site do Curso Preparatório ATS.</p>
-					<p><small><img src="img/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, JOOMLA</small></p>
+					<p>
+						<!-- embed --><svg version="1.1" width="28" height="20" viewBox="0 0 80 64"><path d="M52 46l6 6 20-20-20-20-6 6 14 14z" fill="#ffffff"></path><path d="M28 18l-6-6-20 20 20 20 6-6-14-14z" fill="#ffffff"></path><path d="M43.831 9.407l4.342 1.184-11.999 44.002-4.342-1.184 11.999-44.002z" fill="#ffffff"></path></svg><!-- embed -->
+						<small>PHP, MYSQL, CSS, HTML, JAVASCRIPT, JQUERY, JOOMLA</small>
+					</p>
 				</div>
 
-				<div id="infogruposeaplan">
+				<div id="info-grupo-seaplan" class="info">
+
+					<img class="img-big">
+
 					<h3>Grupo Seaplan</h3>
 
-					<img src="prints/grupo-seaplan.jpg" alt="Site Grupo Seaplan">
-
-					<p><a href="http://www.gruposeaplan.com.br" target="_blank">www.gruposeaplan.com.br <img src="img/new-tab.svg" height="16"></a></p>
+					<p>
+						<a href="http://www.gruposeaplan.com.br" target="_blank">www.gruposeaplan.com.br
+						<!-- new-tab --><svg version="1.1" width="16" height="16" viewBox="0 0 64 64"><path d="M12 4v48h48v-48h-48zM56 48h-40v-40h40v40zM8 56v-42l-4-4v50h50l-4-4h-42z" fill="#ffffff"></path><path d="M22 16l10 10-12 12 6 6 12-12 10 10v-26z" fill="#ffffff"></path></svg><!-- new-tab -->
+						</a>
+					</p>
 					<p>Site da empresa Grupo SEAPLAN.</p>
-					<p><small><img src="img/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, FLASH</small></p>
+					<p>
+						<!-- embed --><svg version="1.1" width="28" height="20" viewBox="0 0 80 64"><path d="M52 46l6 6 20-20-20-20-6 6 14 14z" fill="#ffffff"></path><path d="M28 18l-6-6-20 20 20 20 6-6-14-14z" fill="#ffffff"></path><path d="M43.831 9.407l4.342 1.184-11.999 44.002-4.342-1.184 11.999-44.002z" fill="#ffffff"></path></svg><!-- embed -->
+						<small>PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, FLASH</small>
+					</p>
 				</div>
 
-				<div id="infobrunicbrindes">
+				<div id="info-brunic-brindes" class="info">
+
+					<img class="img-big">
+
 					<h3>Brunic Brindes</h3>
 
-					<img src="prints/brunic-brindes.jpg" alt="Site Brunic Brindes">
-
-					<p><a href="http://www.brunicbrindes.com.br" target="_blank">www.brunicbrindes.com.br <img src="img/new-tab.svg" height="16"></a></p>
+					<p>
+						<a href="http://www.brunicbrindes.com.br" target="_blank">www.brunicbrindes.com.br
+						<!-- new-tab --><svg version="1.1" width="16" height="16" viewBox="0 0 64 64"><path d="M12 4v48h48v-48h-48zM56 48h-40v-40h40v40zM8 56v-42l-4-4v50h50l-4-4h-42z" fill="#ffffff"></path><path d="M22 16l10 10-12 12 6 6 12-12 10 10v-26z" fill="#ffffff"></path></svg><!-- new-tab -->
+						</a>
+					</p>
 					<p>Site da empresa Brunic Brindes.</p>
-					<p><small><img src="img/embed.svg" height="16"> PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, WEBSERVICE CORREIOS, API PAGSEGURO</small></p>
+					<p>
+						<!-- embed --><svg version="1.1" width="28" height="20" viewBox="0 0 80 64"><path d="M52 46l6 6 20-20-20-20-6 6 14 14z" fill="#ffffff"></path><path d="M28 18l-6-6-20 20 20 20 6-6-14-14z" fill="#ffffff"></path><path d="M43.831 9.407l4.342 1.184-11.999 44.002-4.342-1.184 11.999-44.002z" fill="#ffffff"></path></svg><!-- embed -->
+						<small>PHP, MYSQL, CSS, HTML, JAVASCRIPT, PHOTOSHOP, WEBSERVICE CORREIOS, API PAGSEGURO</small>
+					</p>
 				</div>
 
-				<div id="infotrifana">
+				<div id="info-trifana" class="info">
+
+					<img class="img-big">
+
 					<h3>Trifana</h3>
 
-					<img src="prints/trifana.jpg" alt="Site Trifana">
-
-					<p><a href="http://www.trifana.com.br" target="_blank">www.trifana.com.br <img src="img/new-tab.svg" height="16"></a></p>
+					<p>
+						<a href="http://www.trifana.com.br" target="_blank">www.trifana.com.br
+						<!-- new-tab --><svg version="1.1" width="16" height="16" viewBox="0 0 64 64"><path d="M12 4v48h48v-48h-48zM56 48h-40v-40h40v40zM8 56v-42l-4-4v50h50l-4-4h-42z" fill="#ffffff"></path><path d="M22 16l10 10-12 12 6 6 12-12 10 10v-26z" fill="#ffffff"></path></svg><!-- new-tab -->
+						</a>
+					</p>
 					<p>Site do Studio de Beleza Trifana.</p>
-					<p><small><img src="img/embed.svg" height="16"> HTML, CSS, JAVASCRIPT, GIMP</small></p>
+					<p>
+						<!-- embed --><svg version="1.1" width="28" height="20" viewBox="0 0 80 64"><path d="M52 46l6 6 20-20-20-20-6 6 14 14z" fill="#ffffff"></path><path d="M28 18l-6-6-20 20 20 20 6-6-14-14z" fill="#ffffff"></path><path d="M43.831 9.407l4.342 1.184-11.999 44.002-4.342-1.184 11.999-44.002z" fill="#ffffff"></path></svg><!-- embed -->
+						<small>HTML, CSS, JAVASCRIPT, GIMP</small>
+					</p>
 				</div>
 
-				<div id="infotetrisfox">
+				<div id="info-tetrisfox" class="info">
+
+					<img class="img-big">
+
 					<h3>TetrisFOX</h3>
+					<p>
+						Aplicativo para Firefox OS<br>
+						Réplica do famoso jogo Tetris com quase 15000 instalações e avaliação de 5 estrelas.
+					</p>
+					<p>
+						<a href="https://marketplace.firefox.com/app/tetrisfox" target="_blank">https://marketplace.firefox.com/app/tetrisfox
+						<!-- new-tab --><svg version="1.1" width="16" height="16" viewBox="0 0 64 64"><path d="M12 4v48h48v-48h-48zM56 48h-40v-40h40v40zM8 56v-42l-4-4v50h50l-4-4h-42z" fill="#ffffff"></path><path d="M22 16l10 10-12 12 6 6 12-12 10 10v-26z" fill="#ffffff"></path></svg><!-- new-tab -->
+						</a>
+					</p>
 
-					<img src="prints/tetrisfox.jpg" alt="Aplicativo TetrisFOX">
-
-					<p><a href="https://marketplace.firefox.com/app/tetrisfox" target="_blank">https://marketplace.firefox.com/app/tetrisfox <img src="img/new-tab.svg" height="16"></a></p>
-					<p>Aplicativo para Firefox OS</p>
-					<p>Réplica do famoso jogo Tetris com quase 15000 instalações e avaliação de 5 estrelas.</p>
 				</div>
 
 			</div>
@@ -442,68 +504,143 @@
 		<section id="contato" class="container">
 
 			<header>
-
-				<h1><img src="img/mail.svg" height="32"> Contato <small>em que posso ajudar?</small></h1>
-
+				<h1>Contato <small>em que posso ajudar?</small></h1>
 			</header>
+
+			<p>Você têm várias formas de me contatar.</p>
 
 			<article>
 
 				<form id="contato-form">
 
-					<p>
-						<input type="text" name="nome" placeholder="Nome" autocomplete="off" required>
-					</p>
+						<p>
+							<input type="text" name="nome" placeholder="Nome" autocomplete="off" required>
+						</p>
 
-					<p>
-						<input type="email" name="email" placeholder="E-mail" autocomplete="off" required>
-					</p>
+						<p>
+							<input type="email" name="email" placeholder="E-mail" autocomplete="off" required>
+						</p>
 
-					<p>
-						<input type="text" name="assunto" placeholder="Assunto" autocomplete="off" required>
-					</p>
+						<p>
+							<input type="text" name="assunto" placeholder="Assunto" autocomplete="off" required>
+						</p>
 
-					<p>
-						<textarea name="mensagem" placeholder="Mensagem" autocomplete="off" required></textarea>
-					</p>
+						<p>
+							<textarea name="mensagem" placeholder="Mensagem" autocomplete="off" required></textarea>
+						</p>
 
-					<div class="position-relative">
-						<span id="msg-form"></span>
-						<button type="submit">ENVIAR</button>
-					</div>
+						<div>
+							<span id="msg-form"></span>
+							<button type="submit">ENVIAR</button>
+						</div>
 
 				</form>
 
-				<p itemscope itemtype="http://data-vocabulary.org/Person">
-					...ou pelo e-mail <a href="mailto:robertopc.prog@gmail.com" itemprop="email">robertopc.prog@gmail.com</a>
+			</article>
+
+			<aside>
+
+				<p>
+					<big>e-mail</big><span itemscope itemtype="http://data-vocabulary.org/Person"><a href="mailto:robertopc.prog@gmail.com" itemprop="email">robertopc.prog@gmail.com</a></span>
 				</p>
 
-			</article>
+				<p>
+					<big>skype</big><a href="skype:robertopcskype?chat">robertopcskype</a>
+				</p>
+
+				<p>
+					<big>twitter</big><a href="http://twitter.com/robertopc0">robertopc0</a>
+				</p>
+
+				<p>
+					<big>github</big><a href="http://github.com/robertopc">robertopc</a>
+				</p>
+
+				<p>
+					<big>linkedin</big><a href="http://br.linkedin.com/in/robertopc0">robertopc0</a>
+				</p>
+				<!-- <a href="http://twitter.com/robertopc0"><img src="img/twitter.svg" alt="twitter" title="Twitter"></a>
+				<a href=""><img src="img/github.svg" alt="github" title="Github"></a>
+				<a href="http://br.linkedin.com/in/robertopc0"><img src="img/linkedin.svg" alt="linkedin" title="Linkedin"></a> -->
+			</aside>
 
 		</section><!-- #contato -->
 
 	</div>
 
 	<div id="topo" class="hidden ancora">
-		<a href="#home" title="Ir para o topo"><img src="img/up.svg" height="32"></a>
+		<a href="#home" title="Ir para o topo">
+			<!-- up --><svg version="1.1" width="32" height="32" viewBox="0 0 64 64"><path d="M0 32c0 17.673 14.327 32 32 32s32-14.327 32-32-14.327-32-32-32-32 14.327-32 32zM58 32c0 14.359-11.641 26-26 26s-26-11.641-26-26 11.641-26 26-26 26 11.641 26 26z" fill="#ffffff"></path><path d="M44.172 41.828l5.657-5.657-17.828-17.828-17.828 17.828 5.657 5.657 12.172-12.172z" fill="#ffffff"></path></svg><!-- up -->
+		</a>
+	</div>
+
+	<div id="loading">
+		<svg version="1.1" width="64" height="64" viewBox="0 0 64 64">
+			<path d="M32 0c-17.422 0-31.591 13.923-31.991 31.248 0.37-15.116 11.864-27.248 25.991-27.248 14.359 0 26 12.536 26 28 0 3.314 2.686 6 6 6s6-2.686 6-6c0-17.673-14.327-32-32-32zM32 64c17.422 0 31.591-13.923 31.99-31.248-0.37 15.117-11.864 27.248-25.99 27.248-14.359 0-26-12.536-26-28 0-3.314-2.686-6-6-6s-6 2.686-6 6c0 17.673 14.327 32 32 32z" fill="#ffff00"></path>
+		</svg>
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src='js/jquery.scrollreveal.min.js'></script>
-	<script src="js/custom.js"></script>
+	<script>
+		var w = window,
+				d = document,
+				l = w.location;
+
+		// if jquery undefined, load local jquery
+		(function(w,d,s,j,u){
+			if(j == "undefined"){
+				n=d.createElement(s);
+				n.src=u;
+				c=d.getElementsByTagName(s)[0];
+				c.parentNode.insertBefore(n,c);
+			}
+		})(w,d,'script',typeof jQuery,l.origin+l.pathname+"js/jquery.min.js");
+
+		$.ajax({
+		  url: l.origin+l.pathname+'js/custom.js',
+		  dataType: 'script',
+		  cache: true
+		});
+
+		$.ajax({
+		  url: l.origin+l.pathname+'js/jquery.nicescroll.min.js',
+		  dataType: 'script',
+		  cache: true,
+		  success: function() {
+
+			  nice= $("html").niceScroll({
+			    cursorcolor : 'transparent',
+			    cursorborder: '1px solid rgba(255,255,255,0.33)'
+				});
+
+			  $("textarea").niceScroll({
+			    cursorcolor : 'transparent',
+			    cursorborder: '1px solid rgba(255,255,255,0.33)',
+			    autohidemode: false
+				});
+		  }
+		});
+
+		$.ajax({
+		  url: l.origin+l.pathname+'js/jquery.scrollreveal.min.js',
+		  dataType: 'script',
+		  cache: true,
+		  success: function() {
+
+				  w.sr= new scrollReveal({
+				    reset: true,
+				    mobile: false
+				  });
+		  }
+		});
+
+	</script>
 
 	<script>
-
 		/* Google Analytics */
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-63040990-1', 'auto');
 		ga('send', 'pageview');
-
 	</script>
 
 </body>
