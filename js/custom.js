@@ -67,21 +67,27 @@ $(document).ready(function() {
   // FUNCAO SCROLL
   $(w).scroll(function() {
 
-      if( $(this).scrollTop() > 500 ) {
+    // bloqueia scroll horizontal
+    if( $(this).scrollLeft() > 0 ){
+      $(this).scrollLeft(0);
+    }
 
-        // menu flutuante scroll
-        $('#menu-float')
-        .html( $('#menu').html() )
-        .fadeIn('slow');
+    // se scroll vertical passar de 500px
+    if( $(this).scrollTop() > 500 ) {
 
-        $('#topo').fadeIn('slow');
+      // menu flutuante scroll
+      $('#menu-float')
+      .html( $('#menu').html() )
+      .fadeIn('slow');
 
-      } else {
+      $('#topo').fadeIn('slow');
 
-        $('#menu-float').fadeOut('slow').html( '' );
+    } else {
 
-        $('#topo').fadeOut('slow');
-      }
+      $('#menu-float').fadeOut('slow').html( '' );
+
+      $('#topo').fadeOut('slow');
+    }
   })
   .scroll();
 
