@@ -564,12 +564,14 @@
 			}
 
 			#about-section article {
+				font-weight: bold;
 				line-height: 150%;
 			}
 
 		/* 4.3 SERVICES ------------------------------------------------------*/
 
 			#services-section article {
+				font-weight: bold;
 				line-height: 150%;
 			}
 
@@ -585,14 +587,21 @@
 					max-height: 30px;
 				}
 
-			.info-left img {
-				min-width: 240px;
-				max-width: 320px;
-				min-height: 240px;
-				max-height: 320px;
+			.info-left {
+				max-width: 360px;
+				margin-left: calc( 50% - 360px );
 			}
 
+				.info-left img {
+					min-width: 240px;
+					max-width: 320px;
+					min-height: 240px;
+					max-height: 320px;
+				}
+
 			.info-right {
+				font-size: 1.1em;
+				max-width: 400px;
 			}
 
 		/* 4.4 CONTACT -------------------------------------------------------*/
@@ -603,7 +612,6 @@
 
 			#contact-section p {
 			    font-size: 1em;
-				/*line-height: 1em;*/
 			}
 
 			#contact-section form input,
@@ -619,9 +627,14 @@
 
 		/* 4.5 OTHERS --------------------------------------------------------*/
 
-		.fp-slidesNav.bottom {
-			bottom: 60px !important;
-		}
+			.fp-slidesNav.bottom {
+				bottom: 60px !important;
+			}
+
+			#topo svg {
+				width: 24px;
+				height: 24px;
+			}
 	}
 
 	/* lower than 768px */
