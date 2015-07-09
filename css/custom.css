@@ -500,11 +500,26 @@
 
 /* 4. RESPONSIVO ----------------------------------------------*/
 
-	/* lower than 960px */
-	@media (max-width: 959px) {
+	/* lower than 1024px */
+	@media (max-width: 1024px) {
 
 		body {
 			font-size: 10pt;
+		}
+
+		h1 {
+			font-size: 1.7em;
+		}
+			h1 hr {
+				width: 240px;
+			}
+
+		h2 {
+			font-size: 1.3em;
+		}
+
+		h3 {
+			font-size: 0.9em;
 		}
 
 		#menu-float,
@@ -512,23 +527,90 @@
 			width: 100%;
 		}
 
-		#sistemasolar {
-			-webkit-transform: translate(-50%, -45%) scale(0.75);
-			-moz-transform: translate(-50%, -45%) scale(0.75);
-			-ms-transform: translate(-50%, -45%) scale(0.75);
-			-o-transform: translate(-50%, -45%) scale(0.75);
-			transform: translate(-50%, -45%) scale(0.75);
-		}
+		/* 4.1 HOME ----------------------------------------------------------*/
 
-		#info-top {
-			margin-top: 50px;
-		}
+			#sistemasolar {
+				-webkit-transform: translate(-50%, -45%) scale(0.70);
+				-moz-transform: translate(-50%, -45%) scale(0.70);
+				-ms-transform: translate(-50%, -45%) scale(0.70);
+				-o-transform: translate(-50%, -45%) scale(0.70);
+				transform: translate(-50%, -45%) scale(0.70);
+			}
 
-		#info-left,
-		#info-right {
-			width: 100%;
-			max-width: none;
-			text-align: center;
+			#logo {
+				margin-top: 100px;
+			}
+
+			#home-section article {
+				line-height: 100%;
+			}
+
+		/* 4.2 ABOUT ---------------------------------------------------------*/
+
+			#about-avatar {
+				width: 120px;
+				height: 120px;
+			}
+
+			#about-section article {
+				font-size: 1.2em;
+				line-height: 150%;
+			}
+
+		/* 4.3 SERVICES ------------------------------------------------------*/
+
+			#services-section article {
+				font-size: 1.2em;
+				line-height: 150%;
+			}
+
+		/* 4.4 PORTFOLIO -----------------------------------------------------*/
+
+			.computador, .celular {
+				width: 64px;
+				height: 64px;
+				padding-top: 10px;
+			}
+				.computador img, .celular img {
+					max-width: 45px;
+					max-height: 30px;
+				}
+
+			.info-left img {
+				min-width: 240px;
+				max-width: 320px;
+				min-height: 240px;
+				max-height: 320px;
+			}
+
+			.info-right {
+			}
+
+		/* 4.4 CONTACT -------------------------------------------------------*/
+
+			#contact-section header {
+		    	margin-top: 50px;
+			}
+
+			#contact-section p {
+			    font-size: 1em;
+			}
+
+			#contact-section form input,
+			#contact-section form input {
+				font-size: 1em;
+				line-height: 1em;
+			}
+
+			#contact-section svg {
+				width: 32px;
+				height: 32px;
+			}
+
+		/* 4.5 OTHERS --------------------------------------------------------*/
+
+		.fp-slidesNav.bottom {
+			bottom: 60px !important;
 		}
 	}
 
