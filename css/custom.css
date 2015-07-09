@@ -545,6 +545,17 @@
 				line-height: 100%;
 			}
 
+			#menu svg,
+			#icones svg {
+				width:32px;
+				height:32px;
+			}
+
+				#icones svg:hover {
+					width:48px;
+					height:48px;
+				}
+
 		/* 4.2 ABOUT ---------------------------------------------------------*/
 
 			#about-avatar {
@@ -553,14 +564,12 @@
 			}
 
 			#about-section article {
-				font-size: 1.2em;
 				line-height: 150%;
 			}
 
 		/* 4.3 SERVICES ------------------------------------------------------*/
 
 			#services-section article {
-				font-size: 1.2em;
 				line-height: 150%;
 			}
 
@@ -594,12 +603,13 @@
 
 			#contact-section p {
 			    font-size: 1em;
+				/*line-height: 1em;*/
 			}
 
 			#contact-section form input,
-			#contact-section form input {
-				font-size: 1em;
-				line-height: 1em;
+			#contact-section form input,
+			#contact-section form textarea {
+				font-size: 1.5em;
 			}
 
 			#contact-section svg {
