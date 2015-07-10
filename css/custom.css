@@ -714,13 +714,13 @@
 				width: 32px;
 				height: 32px;
 				z-index: 4;
-				cursor: pointer;
 				background: rgba(0, 0, 51, 0.9);
 			}
-				#menu-mobile svg {
+				#menu-mobile-button {
 					position: absolute;
 					top: 0;
-					right: 0;
+					right: 0;					
+					cursor: pointer;
 				}
 
 				#menu-mobile ul {

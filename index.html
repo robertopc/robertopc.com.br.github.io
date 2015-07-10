@@ -54,7 +54,7 @@
 
 	<nav id="menu-mobile" class="ancora" title="menu">
 
-		<svg version="1.1" width="32" height="32" viewBox="0 0 32 32">
+		<svg id="menu-mobile-button" version="1.1" width="32" height="32" viewBox="0 0 32 32">
 			<rect width="32" height="5" y="13.5" x="0" fill="white" />
 			<rect width="32" height="5" y="1" x="0" fill="white" />
 			<rect width="32" height="5" y="26" x="0" fill="white" />
@@ -634,98 +634,9 @@
 	</div><!-- #loading -->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/custom.js"></script>
 	<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
-	<script>
-
-		$('#container').fullpage({
-			anchors: ['home', 'about', 'services', 'portfolio', 'contact'],
-			navigation: true,
-    		slidesNavigation: true,
-			showActiveTooltip: true,
-			verticalCentered: true,
-			responsiveWidth: 768,
-			responsiveHeight: 510,
-    		navigationTooltips: ['home', 'quem sou','o que faço','portfólio','contato'],
-			fixedElements: '#menu-mobile',
-	        onLeave: function(index, nextIndex, direction){
-
-				// Home
-				if( nextIndex == 1 ) {
-
-					$('#menu-float')
-					.fadeOut('slow');
-				} else {
-
-		            // menu flutuante scroll
-		            $('#menu-float')
-		            .html( $('#menu').html() )
-					.fadeIn('slow');
-				}
-
-				// Carrega imagens assincronamente
-				for( var i = 0, len = $('section').eq(nextIndex-1).find('img[data-img]').length; i < len; i++ ) {
-
-					console.log( $('section').eq(nextIndex-1).find('img[data-img]').eq(i) );
-
-					var img = $('section').eq(nextIndex-1).find('img[data-img]').eq(i);
-
-					// se imagens não carregadas
-					if( img.data('img') != '' ) {
-
-						function imgChange(img,i){
-
-							setTimeout(function(){
-
-								img
-								.hide()
-								.css({
-									"-webkit-animation":"none",
-									"animation":"none"
-								})
-								.attr('src', img.data('img') )
-								.fadeIn('slow');
-
-								img.data('img','');
-
-							},i*200);
-						}
-
-						img.fadeOut('slow', imgChange(img,i) );
-					}
-				}
-	        },
-			afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-
-				// se imagens não carregadas
-				if( $( '#' + slideAnchor + ' .info-left img' ).attr('src') == '' ) {
-
-					// para a animação
-		            $( '#' + slideAnchor + ' .info-left' ).css( {
-						"-webkit-animation": "none",
-						"animation": "none",
-						"background": "none"
-					});
-					// insere imagem
-		            $( '#' + slideAnchor + ' .info-left img' ).hide().attr('src','prints/'+ slideAnchor + '.jpg').fadeIn('slow');
-				}
-			}
-		});
-
-		// quando clicar em item do portfolio
-		$('.portfolio').click(function(){
-
-			$.fn.fullpage.moveTo('portfolio', $(this).data('anchor') );
-		});
-
-		// esconde loading div
-		$('#loading').delay(1000).fadeOut(1000);
-
-		// Google Analytics
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-63040990-1', 'auto');
-		ga('send', 'pageview');
-	</script>
+	<script src="js/custom.js"></script>
+	<!-- Google Analytics --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-63040990-1', 'auto');ga('send', 'pageview');</script>
 
 </body>
 </html>
