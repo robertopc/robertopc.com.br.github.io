@@ -55,8 +55,36 @@ $(document).ready(function(){
         });
     });
 
+/* MENU MOBILE */
+    $('#menu-mobile').click(function() {
+
+        if( ! $(this).find('ul').length ) {
+
+            $(this).animate({
+                "top": "0",
+                "right": "0",
+                "width": "100%",
+                "height": "100%"
+            });
+
+            $(this).append( $('#menu').html() );
+            console.log('mostra');
+        } else {
+
+            $(this).find('ul').remove();
+
+            $(this).animate({
+                "top": "10px",
+                "right": "10px",
+                "width": "32px",
+                "height": "32px"
+            });
+            console.log('esconde');
+        }
+    });
+
 /* ON RESIZE */
-    $(w).resize(function(e) {
+    $(window).resize(function(e) {
 
         /* ESTRELAS */
 
@@ -76,4 +104,14 @@ $(document).ready(function(){
             }
         }
     });
+
+    /* ON RESIZE */
+        $(window).scroll(function(e) {
+
+            // bloqueia scroll horizontal
+            if( $(this).scrollLeft() > 0 ) {
+
+                $(this).scrollLeft(0);
+            }
+        });
 });
