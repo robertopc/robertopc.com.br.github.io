@@ -110,8 +110,6 @@ $(document).ready(function(){
             // Carrega imagens assincronamente
             for( var i = 0, len = $('section').eq(nextIndex-1).find('img[data-img]').length; i < len; i++ ) {
 
-                console.log( $('section').eq(nextIndex-1).find('img[data-img]').eq(i) );
-
                 var img = $('section').eq(nextIndex-1).find('img[data-img]').eq(i);
 
                 // se imagens não carregadas
