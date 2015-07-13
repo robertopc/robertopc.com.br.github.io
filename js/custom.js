@@ -5,23 +5,6 @@ $(document).ready(function(){
         canvas  = $('#estrelas'),
         context = canvas[0].getContext('2d');
 
-    /* ESTRELAS */
-        canvas.attr( 'width', $( d ).width() );
-        canvas.attr( 'height', $( d ).height() );
-
-        for( var i = 0; i < 600; i++ ) {
-
-            x = Math.round( Math.random() * $( d ).width() );
-            y = Math.round( Math.random() * $( d ).height() );
-
-            // estrelas desenhadas apenas nas margens
-            if(x < $( d ).width() * 0.2 || x > ( $( d ).width() * 0.8 ) ) {
-
-                context.fillStyle = "#ffffff";
-                context.fillRect( x, y, 1, 1 );
-            }
-        }
-
     /* FORMULÁRIO DE CONTATO */
     $('#contact-form').submit(function(event){
         // previne o envio do form
@@ -165,9 +148,13 @@ $(document).ready(function(){
     $('#loading').delay(1000).fadeOut(1000);
 
     /* ON RESIZE */
-    $(window).resize(function(e) {
+
+    var onResize = function(e) {
 
         /* ESTRELAS */
+
+        canvas.attr( 'width', $( d ).width() );
+        canvas.attr( 'height', $( d ).height() );
 
         // limpa canvas
         context.clearRect(0, 0, canvas.width(), canvas.height());
@@ -184,7 +171,11 @@ $(document).ready(function(){
                 context.fillRect( x, y, 1, 1 );
             }
         }
-    });
+    };
+
+    $(window).resize( onResize );
+
+    onResize();
 
     /* ON SCROLL */
     $(window).scroll(function(e) {
