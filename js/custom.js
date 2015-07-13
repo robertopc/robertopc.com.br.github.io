@@ -22,7 +22,7 @@ $(document).ready(function(){
             }
         }
 
-/* FORMULÁRIO DE CONTATO */
+    /* FORMULÁRIO DE CONTATO */
     $('#contact-form').submit(function(event){
         // previne o envio do form
         event.preventDefault();
@@ -35,30 +35,29 @@ $(document).ready(function(){
             type: 'post',
             crossDomain: true,
             data: $('#contact-form').serializeArray(),
-            success: function( msg ) {
-                console.log( "Request success: "+ msg );
-            },
-            error: function( jqXHR, textStatus ) {
-                console.log( "Request failed: "+ textStatus );
-            },
             complete: function( jqXHR, textStatus ) {
 
-            console.log( "Request complete: "+ textStatus );
+                if( textStatus == 'success' ){
 
-                // reseta formulário
-                $('#contact-form')[0].reset();
+                    // reseta formulário
+                    $('#contact-form')[0].reset();
+
+                    $('#msg-form').html('Mensagem enviada!');
+                } else {
+
+                    $('#msg-form').html('Erro: mensagem não enviada!');
+                }
 
                 // habilita submit e adiciona msg de enviar
                 $('#contact-form-submit').removeAttr('disabled').html('Enviar');
-                $('#msg-form').html('Mensagem enviada!');
             }
         });
 
         return false;
     });
 
-/* MENU MOBILE */
-    $('#menu-mobile').delegate('#menu-mobile-button, a', 'click', function() {
+    /* MENU MOBILE */
+    $('#menu-mobile').delegate('#menu-mobile-button, a', 'click', function(){
 
         if( ! $('#menu-mobile').find('ul').length ) {
 
@@ -83,7 +82,7 @@ $(document).ready(function(){
         }
     });
 
-/* fullPage */
+    /* fullPage */
     $('#container').fullpage({
         anchors: ['home', 'about', 'services', 'portfolio', 'contact'],
         navigation: true,
@@ -156,16 +155,16 @@ $(document).ready(function(){
         }
     });
 
-/* quando clicar em item do portfolio */
+    /* quando clicar em item do portfolio */
     $('.portfolio').click(function(){
 
         $.fn.fullpage.moveTo('portfolio', $(this).data('anchor') );
     });
 
-/* esconde loading div */
+    /* esconde loading div */
     $('#loading').delay(1000).fadeOut(1000);
 
-/* ON RESIZE */
+    /* ON RESIZE */
     $(window).resize(function(e) {
 
         /* ESTRELAS */
@@ -187,7 +186,7 @@ $(document).ready(function(){
         }
     });
 
-/* ON SCROLL */
+    /* ON SCROLL */
     $(window).scroll(function(e) {
 
         // bloqueia scroll horizontal
