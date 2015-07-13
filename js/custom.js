@@ -23,18 +23,18 @@ $(document).ready(function(){
         }
 
 /* FORMULÁRIO DE CONTATO */
-    $('#contato-form').submit(function(event){
+    $('#contact-form').submit(function(event){
         // previne o envio do form
         event.preventDefault();
 
         // desabilita submit e adiciona msg de "enviando..."
-        $(this).find('[type="submit"]').attr('disabled','true').html('Enviando...');
+        $('#contact-form-submit').attr('disabled','true').html('Enviando...');
 
         $.ajax({
             url: 'http://robertopc.net/contato.php',
             type: 'post',
             crossDomain: true,
-            data: $('#contato-form').serializeArray(),
+            data: $('#contact-form').serializeArray(),
             success: function( msg ) {
                 console.log( "Request success: "+ msg );
             },
@@ -46,13 +46,15 @@ $(document).ready(function(){
             console.log( "Request complete: "+ textStatus );
 
                 // reseta formulário
-                $('#contato-form')[0].reset();
+                $('#contact-form')[0].reset();
 
                 // habilita submit e adiciona msg de enviar
-                $('#contato-form [type="submit"]').removeAttr('disabled').html('Enviar');
+                $('#contact-form-submit').removeAttr('disabled').html('Enviar');
                 $('#msg-form').html('Mensagem enviada!');
             }
         });
+
+        return false;
     });
 
 /* MENU MOBILE */
