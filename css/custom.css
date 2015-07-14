@@ -664,10 +664,6 @@
 			}
 
 		/* 4.1.6 OTHERS ------------------------------------------------------*/
-
-			#fp-nav {
-				z-index: 3;
-			}
 	}
 
 	/* 4.2 <= 768px ----------------------------------------------------------*/
@@ -719,7 +715,7 @@
 				#menu-mobile-button {
 					position: absolute;
 					top: 0;
-					right: 0;					
+					right: 0;
 					cursor: pointer;
 				}
 
@@ -995,6 +991,7 @@
 	#fp-nav {
 		top: inherit;
 		bottom: 15px;
+		z-index: 3;
 	}
 		#fp-nav span {
 			background: #fff !important;
