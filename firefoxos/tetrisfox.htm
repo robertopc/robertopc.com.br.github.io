@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>TetrisFOX - Hosted Installation</title>
+</head>
+<body>
+    <h1>TetrisFOX</h1>
+    <hr>
+    <h2 id="msg">Installing...</h2>
+    <hr>
+    <a href="javascript:window.history.go(-1)">&#8592; Go back</a>
+    <script>
+        // This URL must be a full url.
+        var manifestUrl = 'http://robertopc.com.br/firefoxos/tetrisfox.manifest';
+        var req = navigator.mozApps.installPackage(manifestUrl);
+        req.onsuccess = function() {
+            document.getElementById('msg').innerHTML = "Successful installation!";
+        };
+        req.onerror = function() {
+            document.getElementById('msg').innerHTML = "ERROR: "+ this.error.name;
+        };
+    </script>
+</body>
+</html>
