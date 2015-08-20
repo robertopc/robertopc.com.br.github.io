@@ -23,6 +23,10 @@
         "es": {
             "name": "TetrisFOX",
             "description": "El famoso juego Tetris para FirefoxOS"
+        },
+        "en-US": {
+            "name": "TetrisFOX",
+            "description": "The famous game Tetris for FirefoxOS"
         }
     }
 }
