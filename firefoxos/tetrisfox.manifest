@@ -3,7 +3,7 @@
     "name": "TetrisFOX",
     "description": "The famous game Tetris for FirefoxOS",
     "package_path": "http://robertopc.com.br/firefoxos/tetrisfox.zip",
-    "size": 130000,
+    "size": 106096,
     "developer": {
         "name": "RobertoPC",
         "url": "http://robertopc.com.br"
