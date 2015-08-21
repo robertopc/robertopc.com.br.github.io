@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TetrisFOX</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>TetrisFOX</p>
+
+    <script>
+        (function() {
+            var manifestUrl = location.href.replace(/index\.html?/,"") +'package.webapp';
+
+            if (! navigator.mozApps.installPackage) {
+                alert("ERRO: Incompatível com seu dispositivo.");
+                return;
+            }
+            console.log(manifestUrl);
+            var req = navigator.mozApps.installPackage(manifestUrl);
+            req.onsuccess = function() {
+                alert("Instalado. ");
+                console.log(this.result);
+            };
+            req.onerror = function() { alert("Erro: "+this.error.name); };
+        })();
+    </script>
+</body>
+</html>
