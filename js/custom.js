@@ -1,9 +1,20 @@
 $(document).ready(function(){
 
-    var d       = document,
-        w       = window,
-        canvas  = $('#estrelas'),
-        context = canvas[0].getContext('2d');
+    var d           = document,
+        w           = window,
+        canvas      = $('#estrelas'),
+        context     = canvas[0].getContext('2d'),
+        data        = new Date()
+        aniversario = false;
+
+    // verifica se fiz aniversario
+    aniversario = data.getMonth() > 7 && data.getDate() > 4 ? 1990 : 1990 + 1;
+
+    // adiciona anos experiência
+    $('.anos-experiencia').html( data.getFullYear() - 2008 );
+
+    // adiciona idade
+    $('#idade').html( data.getFullYear() - aniversario );
 
     /* FORMULÁRIO DE CONTATO */
     $('#contact-form').submit(function(event){
@@ -14,7 +25,7 @@ $(document).ready(function(){
         $('#contact-form-submit').attr('disabled','true').html('Enviando...');
 
         $.ajax({
-            url: 'http://robertopc.net/contato.php',
+            url: 'http://buscasaara.com.br/robertopc-contato.php',
             type: 'post',
             crossDomain: true,
             data: $('#contact-form').serializeArray(),
