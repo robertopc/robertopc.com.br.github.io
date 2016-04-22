@@ -21,6 +21,8 @@ $(document).ready(function(){
         // previne o envio do form
         event.preventDefault();
 
+	$('#msg-form').html('');
+
         // desabilita submit e adiciona msg de "enviando..."
         $('#contact-form-submit').attr('disabled','true').html('Enviando...');
 
