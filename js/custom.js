@@ -27,21 +27,22 @@ $(document).ready(function(){
         $('#contact-form-submit').attr('disabled','true').html('Enviando...');
 
         $.ajax({
-            url: 'http://buscasaara.com.br/robertopc-contato.php',
+            url: 'http://buscasaara.com.br/robertopc-contato.php?callback=?',
             type: 'post',
-            crossDomain: true,
             data: $('#contact-form').serializeArray(),
-            complete: function( jqXHR, textStatus ) {
+            success: function( r ) {
 
-                if( textStatus == 'success' ){
+                if( r[0] == 'ok' ){
 
                     // reseta formulário
                     $('#contact-form')[0].reset();
 
-                    $('#msg-form').html('Mensagem enviada!');
+                    $('#msg-form').html(r[1]);
                 } else {
 
-                    $('#msg-form').html('Erro: mensagem não enviada!');
+                    $('#msg-form').html(r[1]);
+
+		    console.log(r[2]);
                 }
 
                 // habilita submit e adiciona msg de enviar
