@@ -27,9 +27,10 @@ $(document).ready(function(){
         $('#contact-form-submit').attr('disabled','true').html('Enviando...');
 
         $.ajax({
-            url: 'http://buscasaara.com.br/robertopc-contato.php?callback=?',
+            url: 'http://buscasaara.com.br/robertopc-contato.php',
             type: 'post',
             data: $('#contact-form').serializeArray(),
+	    dataType: 'jsonp',
             success: function( r ) {
 
                 if( r[0] == 'ok' ){
