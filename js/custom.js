@@ -4,10 +4,10 @@ $(document).ready(function(){
         w           = window,
         canvas      = $('#estrelas'),
         context     = canvas[0].getContext('2d'),
-        data        = new Date()
+        data        = new Date(),
         aniversario = false;
 
-    // verifica se fiz aniversario
+    // se fiz aniversario
     aniversario = data.getMonth() > 7 && data.getDate() > 4 ? 1990 : 1990 + 1;
 
     // adiciona anos experiência
@@ -15,44 +15,6 @@ $(document).ready(function(){
 
     // adiciona idade
     $('#idade').html( data.getFullYear() - aniversario );
-
-    /* FORMULÁRIO DE CONTATO */
-    $('#contact-form').submit(function(event){
-        // previne o envio do form
-        event.preventDefault();
-
-	$('#msg-form').html('');
-
-        // desabilita submit e adiciona msg de "enviando..."
-        $('#contact-form-submit').attr('disabled','true').html('Enviando...');
-
-        $.ajax({
-            url: 'http://buscasaara.com.br/robertopc-contato.php',
-            type: 'post',
-            data: $('#contact-form').serializeArray(),
-	    dataType: 'jsonp',
-            success: function( r ) {
-
-                if( r[0] == 'ok' ){
-
-                    // reseta formulário
-                    $('#contact-form')[0].reset();
-
-                    $('#msg-form').html(r[1]);
-                } else {
-
-                    $('#msg-form').html(r[1]);
-
-		    console.log(r[2]);
-                }
-
-                // habilita submit e adiciona msg de enviar
-                $('#contact-form-submit').removeAttr('disabled').html('Enviar');
-            }
-        });
-
-        return false;
-    });
 
     /* MENU MOBILE */
     $('#menu-mobile').delegate('#menu-mobile-button, a', 'click', function(){
@@ -94,7 +56,7 @@ $(document).ready(function(){
         onLeave: function(index, nextIndex, direction){
 
             // Home
-            if( nextIndex == 1 ) {
+            if( nextIndex === 1 ) {
 
                 $('#menu-float')
                 .fadeOut('slow');
@@ -111,8 +73,8 @@ $(document).ready(function(){
 
                 var img = $('section').eq(nextIndex-1).find('img[data-img]').eq(i);
 
-                // se imagens não carregadas
-                if( img.data('img') != '' ) {
+                // se imagens n&atilde;o carregadas
+                if( img.data('img') !== '' ) {
 
                     function imgChange(img,i){
 
@@ -139,9 +101,9 @@ $(document).ready(function(){
         afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
 
             // se imagens não carregadas
-            if( $( '#' + slideAnchor + ' .info-left img' ).attr('src') == '' ) {
+            if( $( '#' + slideAnchor + ' .info-left img' ).attr('src') === '' ) {
 
-                // para a animação
+                // para a animaç&atilde;o
                 $( '#' + slideAnchor + ' .info-left' ).css( {
                     "-webkit-animation": "none",
                     "animation": "none",
@@ -202,3 +164,8 @@ $(document).ready(function(){
         }
     });
 });
+
+function mailTo() {
+
+    window.location.href = 'mailto:' + String.fromCharCode(114,111,98,101,114,116,111,112,99,46,112,114,111,103,64,103,109,97,105,108,46,99,111,109);
+}

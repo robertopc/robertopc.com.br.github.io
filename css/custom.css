@@ -46,16 +46,16 @@
 /* 1. TAGS -------------------------------------------------------------------*/
 
 	:focus {
-		outline: #ff0 1px dotted;
+            outline: #ff0 1px dotted;
 	}
 
 	::-moz-selection {
-    	background: yellow;
-		color: black;
+            background: yellow;
+            color: black;
 	}
 	::selection {
-    background: yellow;
-		color: black;
+            background: yellow;
+            color: black;
 	}
 
 	*, *:before, *:after {
@@ -77,36 +77,36 @@
 		background: -ms-radial-gradient(center, ellipse cover,  #000033 0%,#000000 100%); /* IE10+ */
 		background: radial-gradient(ellipse at center,  #000033 0%,#000000 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000033', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-		color: #fff;
+		color: #c0c0c0;
 		font-family: Roboto, sans-serif;
 		font-weight: 100;
-		font-size: 14px;
+		font-size: 16px;
 		overflow: hidden;
 	}
 
 	a {
-		color: #fff;
+            color: #c0c0c0;
 	}
-		a:hover {
-			color: yellow;
-		}
+            a:hover {
+                color: yellow;
+            }
 
 	h1 {
-		font-size: 2em;
-		font-weight: 100;
+            font-size: 2em;
+            font-weight: 100;
 	}
-		h1 hr {
-			margin: 0;
-			border: 0;
-			height: 1px;
-			width: 320px;
-			max-width: 100%;
-			margin: 0 auto;
-			background: rgba( 255, 255, 255, 0.33);
-		}
+            h1 hr {
+                margin: 0;
+                border: 0;
+                height: 1px;
+                width: 320px;
+                max-width: 100%;
+                margin: 0 auto;
+                background: rgba( 255, 255, 255, 0.33);
+            }
 
 	h2 {
-		font-size: 1.5em;
+            font-size: 1.5em;
 	}
 
 	h1, h2, ul, big {
@@ -386,25 +386,92 @@
 			}
 
 		#icones {
-			position: relative;
-			text-align: center;
-			margin: 50px 0 0 0;
-			z-index: 2;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    width: 10rem;
+                    height: 10rem;
+                    text-align: center;
+                    margin: 50px 0 0 0;
+                    z-index: 2;
 		}
 
-		#icones svg {
-			width: 48px;
-			height: 48px;
-			margin: 8px;
-		}
-			#icones svg:hover {
-				width: 64px;
-				height: 64px;
-				margin: 0;
-			}
-					#icones svg:hover path {
-						stroke: #ff0;
-					}
+                #menu svg {
+                    width:3rem;
+                    height:3rem;
+                }
+
+                @keyframes rotacao {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes rotacao-inversa {
+                    to {
+                        transform: rotate(-360deg);
+                    }
+                }
+                
+		#icones {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 20rem;
+                    height: 20rem;
+                    text-align: center;
+                    margin: -10rem 0 0 -10rem;
+                    z-index: 2;
+                    animation: rotacao 60s linear infinite;
+                    background: radial-gradient(black,transparent,transparent,transparent,transparent);
+                }
+
+                #icones:hover,
+                #icones:hover svg {
+                    animation-play-state: paused; 
+                }
+
+                #icones svg {
+                    position:absolute;
+                    width:4rem;
+                    height:4rem;
+                    animation: rotacao-inversa 60s linear infinite;
+                }
+                
+                #icones svg text {
+                    visibility: hidden;
+                }
+
+                #icone-twitter {
+                        left:0;
+                        top:6rem;
+                }
+
+                #icone-github {
+                        left:8rem;
+                        top:0;
+                }
+                #icone-skype {
+                        right:0;
+                        top:6rem;
+                }
+                #icone-email {
+                        right:4rem;
+                        bottom:0;
+                }
+                #icone-linkedin {
+                        left:4rem;
+                        bottom:0;
+                }
+
+                #icones svg:hover path {
+                    stroke: #ff0;
+                }
+
+                #icones svg:hover text {
+                    visibility: visible;
+                    fill: #ff0;
+                }
 
 	/* 3.3 PORTFOLIO ---------------------------------------------------------*/
 
@@ -593,17 +660,6 @@
 				font-size: 1.2em;
 			}
 
-			#menu svg,
-			#icones svg {
-				width:32px;
-				height:32px;
-			}
-
-				#icones svg:hover {
-					width:48px;
-					height:48px;
-				}
-
 		/* 4.1.2 ABOUT -------------------------------------------------------*/
 
 			#about-avatar {
@@ -656,11 +712,6 @@
 			#contact-section form input,
 			#contact-section form textarea {
 				font-size: 1.5em;
-			}
-
-			#contact-section svg {
-				width: 32px;
-				height: 32px;
 			}
 
 		/* 4.1.6 OTHERS ------------------------------------------------------*/
@@ -744,15 +795,6 @@
 					#menu-mobile a {
 						text-decoration: none;
 					}
-
-			#icones svg {
-				height: 24px;
-				margin: 4px;
-			}
-				#icones svg:hover {
-					height: 32px;
-					margin: 0;
-				}
 
 		/* 4.2.2 ABOUT -------------------------------------------------------*/
 		/* 4.2.3 SERVICES ----------------------------------------------------*/
