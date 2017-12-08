@@ -1,0 +1,63 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+h1 {
+  font-size: 2rem !important;
+}
+
+hr {
+  &.separator {
+    margin: 2rem 0 !important;
+    visibility: hidden;
+  }
+}
+
+.home {
+  h1 {
+    font-size: 1.6rem !important;
+  }
+  .post-list {
+    h2 {
+      display: inline-block;
+      margin-left: 1rem;
+      * {
+        font-size: 1rem;
+      }
+    }
+
+    li {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+#page-sobre-mim {
+
+  h2 {
+    margin-top: 3rem;
+  }
+
+  img[alt="gravatar"] {
+    border-radius: 50%;
+    margin: 0 0 2rem 50%;
+    transform: translateX(-50%);
+  }
+
+  img[alt="projeto"] {
+    width: 160px;
+    float: left;
+    margin: 0 2rem 4rem 0;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  svg {
+    float: left;
+    margin-right: 1rem;
+  }
+}

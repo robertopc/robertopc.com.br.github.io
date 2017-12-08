@@ -1,0 +1,38 @@
+title: RobertoPC blog
+email: robertopc.prog@gmail.com
+description: "Um blog sobre programação e whatever."
+baseurl: "/blog/"
+url: "https://robertopc.com.br"
+twitter_username: robertopc0
+github_username:  robertopc
+linkedin_username: robertopc0
+lang: pt-br
+google_analytics: UA-63040990-1
+disqus:
+    shortname: robertopc
+author: Roberto Pereira da Costa
+
+# personal infos
+cidade: São João de Meriti
+estado: RJ
+profissao-atual: Programador PHP/Python na [UERJ](http://www.uerj.br)
+
+gravatar: https://s.gravatar.com/avatar/59076cb7e11b7320dd48f7560b5be6e2
+linkedin: https://www.linkedin.com/in/robertopc0/
+github-perfil: https://github.com/robertopc
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+permalink: /:title/
+
+exclude:
+ - Gemfile
+ - Gemfile.lock
+ - node_modules
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
