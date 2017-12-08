@@ -7,6 +7,7 @@ description:  'Explicação e exemplos de utilização do comando SED para subst
 published:    true
 author:	      RobertoPC
 tags:	      linux, sed
+permalink:    blog/comando-sed-substituicao-de-texto-no-terminal-linux/
 ---
 
 Neste post segue uma pequena explicação e exemplos de utilização do comando SED para substituição de texto no terminal do Linux.
