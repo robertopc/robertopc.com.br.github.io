@@ -31,7 +31,7 @@ SASS        |             |           |
 Abaixo estão listados alguns de meus projetos.
 
 ### TetrisFox
-![projeto](https://robertopc.github.io/prints/tetrisfox.jpg)
+![projeto]({{ 'old/prints/tetrisfox.jpg' | absolute_url }})
 Aplicativo para Firefox OS.
 Réplica do famoso jogo Tetris com mais de 18000 instalações e avaliação de 5 estrelas na Firefox Marketplace.
 
