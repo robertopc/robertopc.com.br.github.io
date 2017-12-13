@@ -16,15 +16,15 @@ Sou casado e pai de um moleque maravilhoso chamado Roger.
 
 A seguir possui uma tabela com as principais tecnologias que trabalho e ferramentas que uso.
 
-Front-end   | Back-end    | Softwares | Mobile
-:-----------|:------------|:----------|:------
-HTML        | PHP         | GNU/Linux | Phonegap
-CSS         | MySQL       | Atom      | FirefoxOS
-Javascript  | PostgreSQL  | Netbeans  |
-jQuery      | Python      | Gimp      |
-Bootstrap   | CodeIgniter | Inkscape  |
-Materialize |             |           |
-SASS        |             |           |
+| Front-end   | Back-end    | Softwares | Mobile    |
+| :---------- | :---------- | :-------- | :-------- |
+| HTML        | PHP         | GNU/Linux | Phonegap  |
+| CSS         | MySQL       | Atom      | FirefoxOS |
+| Javascript  | PostgreSQL  | Netbeans  |
+| jQuery      | Python      | Gimp      |
+| Bootstrap   | CodeIgniter | Inkscape  |
+| Materialize |             |           |
+| SASS        |             |           |
 
 ## Projetos
 
@@ -36,12 +36,13 @@ Aplicativo para Firefox OS.
 Réplica do famoso jogo Tetris com mais de 18000 instalações e avaliação de 5 estrelas na Firefox Marketplace.
 
 Feito em: <code>HTML5</code>, <code>CSS3</code>, <code>Javascript</code>, <code>SVG</code>, <code>Firebase</code>
-```
-Criado em:	20/12/2014
+<pre>
+Criado em:      20/12/2014
 Atualizado em:	20/08/2015
 Versão:	        1.2.1
 Licença:        GNU GPL V2
-```
+</pre>
+
 {% include icon-pacman.svg %} [Jogue agora!](http://robertopc.github.io/tetrisfox)
 
 {% include icon-link.svg %} [TetrisFOX na Firefox Marketplace](https://marketplace.firefox.com/app/tetrisfox)
