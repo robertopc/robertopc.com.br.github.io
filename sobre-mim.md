@@ -31,7 +31,7 @@ A seguir possui uma tabela com as principais tecnologias que trabalho e ferramen
 Abaixo estão listados alguns de meus projetos.
 
 ### TetrisFox
-![projeto]({{ 'old/prints/tetrisfox.jpg' | absolute_url }})
+![projeto]({{ 'assets/tetrisfox.jpg' | absolute_url }})
 Aplicativo para Firefox OS.
 Réplica do famoso jogo Tetris com mais de 18000 instalações e avaliação de 5 estrelas na Firefox Marketplace.
 
@@ -45,7 +45,7 @@ Licença:        GNU GPL V2
 
 {% include icon-pacman.svg %} [Jogue agora!](http://robertopc.github.io/tetrisfox)
 
-{% include icon-link.svg %} [TetrisFOX na Firefox Marketplace](https://marketplace.firefox.com/app/tetrisfox)
+{% include icon-link.svg %} [~TetrisFOX na Firefox Marketplace~](https://marketplace.firefox.com/app/tetrisfox)(O projeto foi descontinuado em 2016. Só ficou na [lembrança](https://en.wikipedia.org/wiki/Firefox_OS)...)
 
 {% include icon-source.svg %} [Código Fonte](https://github.com/robertopc/tetrisfox)
 

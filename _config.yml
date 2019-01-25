@@ -1,4 +1,4 @@
-title: RobertoPC blog
+title: RobertoPC
 email: robertopc.prog@gmail.com
 description: "Um blog sobre programação e whatever."
 baseurl: ""
@@ -13,9 +13,9 @@ disqus:
 author: Roberto Pereira da Costa
 
 # personal infos
-cidade: São João de Meriti
+cidade: Nova Iguaçu
 estado: RJ
-profissao-atual: Programador PHP/Python na [UERJ](http://www.uerj.br)
+profissao-atual: Programador na [UERJ](http://www.uerj.br)
 
 gravatar: https://s.gravatar.com/avatar/59076cb7e11b7320dd48f7560b5be6e2
 linkedin: https://www.linkedin.com/in/robertopc0/
