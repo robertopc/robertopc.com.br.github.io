@@ -4,8 +4,6 @@ title: Sobre Mim
 permalink: /sobre/
 ---
 
-![avatar]({{ site.avatar }}?s=160)
-
 Olá me chamo Roberto, tenho {{ site.time | date: '%Y' | minus: 1990 }} anos, moro em {{site.cidade}}({{site.estado}}) e sou desenvolvedor web com mais de {{ site.time | date: '%Y' | minus: 2008 }} anos de experiência e paixão pelo que faço. Atualmente trabalho como {{site.profissao-atual}}. 
 
 Para visualizar meu currículo, acesse meu [Linkedin]({{footer-links.linkedin}}) e meus códigos no [Github]({{footer-links.github-perfil}}).
