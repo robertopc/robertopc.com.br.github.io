@@ -4,7 +4,7 @@
 # ESTE SCRIPT AUTOMATIZA A CRIAÇÃO DO POST NO JEKYLL
 #
 # Uso:
-# ./new-post.sh 'Titulo do post'
+# ./new-post.sh "Titulo do post" "Descrição do post"
 
 # titulo do post
 titulo=${1}
@@ -17,14 +17,14 @@ arquivo="_posts/`date +%Y-%m-%d-`${nome}.md"
 
 # cria o arquivo e insere o cabecalho do post
 echo "---
-layout:       post
-title:        '${titulo}'
-date:         `date +%Y-%m-%d\ %H:%M:%S\ %z`
-update:       
-description:  ''
-author:       
-published:    true
-tags:         
+layout:      post
+title:       '${titulo}'
+date:        `date +%Y-%m-%d\ %H:%M:%S\ %z`
+update:      
+description: '${2}'
+author:      robertopc
+published:   true
+tags:        []
 ---
 
 " > ${arquivo}
