@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="post-header">
-  <h1 class="post-title">{{ page.title | escape }}</h1>
-  <small>{{ page.description }}</small>
-  </header>
 
-  <div class="post-content">
-  {{ content }}
+<article class="page">
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
   </div>
-
 </article>
