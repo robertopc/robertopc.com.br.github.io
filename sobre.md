@@ -29,7 +29,7 @@ A seguir possui uma tabela com as principais tecnologias que trabalho e ferramen
 Abaixo estão listados alguns de meus projetos.
 
 ### TetrisFox
-<div class="fleft">![projeto]({{ 'images/tetrisfox.jpg' | absolute_url }}){.thumb-projeto}</div>
+<div class="fleft">![projeto]({{ 'images/tetrisfox.jpg' | absolute_url }})</div>
 Aplicativo para Firefox OS.
 Réplica do famoso jogo Tetris com mais de 18000 instalações e avaliação de 5 estrelas na Firefox Marketplace.
 
