@@ -6,7 +6,7 @@ permalink: /sobre/
 
 Olá me chamo Roberto, tenho {{ site.time | date: '%Y' | minus: 1990 }} anos, moro em {{site.cidade}}({{site.estado}}) e sou desenvolvedor web com mais de {{ site.time | date: '%Y' | minus: 2008 }} anos de experiência e paixão pelo que faço. Atualmente trabalho como {{site.profissao-atual}}. 
 
-Para visualizar meu currículo, acesse meu [Linkedin]({{footer-links.linkedin}}) e meus códigos no [Github]({{footer-links.github-perfil}}).
+Para visualizar meu currículo, acesse meu [Linkedin]({{site.footer-links.linkedin}}) e meus códigos no [Github]({{site.footer-links.github-perfil}}).
 
 Sou casado e pai de um moleque maravilhoso chamado Roger.
 
@@ -29,7 +29,7 @@ A seguir possui uma tabela com as principais tecnologias que trabalho e ferramen
 Abaixo estão listados alguns de meus projetos.
 
 ### TetrisFox
-![projeto]({{ 'images/tetrisfox.jpg' | absolute_url }})
+<div class="fleft">![projeto]({{ 'images/tetrisfox.jpg' | absolute_url }}){.thumb-projeto}</div>
 Aplicativo para Firefox OS.
 Réplica do famoso jogo Tetris com mais de 18000 instalações e avaliação de 5 estrelas na Firefox Marketplace.
 
@@ -41,9 +41,9 @@ Versão:	        1.2.1
 Licença:        GNU GPL V2
 </pre>
 
-{% include icon-pacman.svg %} [Jogue agora!](http://robertopc.github.io/tetrisfox)
+<div class="fleft">{% include icon-pacman.svg %}</div> [Jogue agora!](http://robertopc.github.io/tetrisfox)
 
-{% include icon-link.svg %} [<strike>TetrisFOX na Firefox Marketplace</strike>](https://marketplace.firefox.com/app/tetrisfox)(O projeto foi descontinuado. Só ficou na [lembrança](https://en.wikipedia.org/wiki/Firefox_OS)...)
+<div class="fleft">{% include icon-link.svg %}</div> [<strike>TetrisFOX na Firefox Marketplace</strike>](https://marketplace.firefox.com/app/tetrisfox)(projeto descontinuado)
 
-{% include icon-source.svg %} [Código Fonte](https://github.com/robertopc/tetrisfox)
+<div class="fleft">{% include icon-source.svg %}</div> [Código Fonte](https://github.com/robertopc/tetrisfox)
 
