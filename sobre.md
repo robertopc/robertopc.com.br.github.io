@@ -41,4 +41,4 @@ Versão:	        1.2.1
 Licença:        GNU GPL V2
 </pre>
 
-[Jogue agora!](http://robertopc.github.io/tetrisfox) - [<strike>Firefox Marketplace</strike>](https://marketplace.firefox.com/app/tetrisfox)(projeto descontinuado) - [Código Fonte](https://github.com/robertopc/tetrisfox)
+[Jogue agora!](http://robertopc.github.io/tetrisfox) - [<strike>Firefox Marketplace</strike>](https://marketplace.firefox.com/app/tetrisfox) - [Código Fonte](https://github.com/robertopc/tetrisfox)
