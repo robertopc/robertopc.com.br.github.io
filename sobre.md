@@ -41,9 +41,10 @@ Versão:	        1.2.1
 Licença:        GNU GPL V2
 </pre>
 
-<div class="fleft">{% include icon-pacman.svg %}</div> [Jogue agora!](http://robertopc.github.io/tetrisfox)
+<div class="projeto-icons">
+{% include icon-pacman.svg %} [Jogue agora!](http://robertopc.github.io/tetrisfox)
 
-<div class="fleft">{% include icon-link.svg %}</div> [<strike>TetrisFOX na Firefox Marketplace</strike>](https://marketplace.firefox.com/app/tetrisfox)(projeto descontinuado)
+{% include icon-link.svg %} [<strike>TetrisFOX na Firefox Marketplace</strike>](https://marketplace.firefox.com/app/tetrisfox)(projeto descontinuado)
 
-<div class="fleft">{% include icon-source.svg %}</div> [Código Fonte](https://github.com/robertopc/tetrisfox)
-
+{% include icon-source.svg %} [Código Fonte](https://github.com/robertopc/tetrisfox)
+</div>
