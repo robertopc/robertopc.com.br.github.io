@@ -6,7 +6,7 @@ update:
 description:  'Explicação e exemplos de utilização do comando SED para substituição de texto no terminal do Linux.'
 published:    true
 author:	      RobertoPC
-tags:	      linux,sed
+tags:	      [linux, sed]
 permalink:    blog/comando-sed-substituicao-de-texto-no-terminal-linux/
 ---
 
