@@ -7,7 +7,7 @@
 # ./new-post.sh "Titulo do post" "Descrição do post"
 
 if [ -z $1 ]; then
-    echo "usage: $0 \"Título do post\""
+    echo "usage: $0 \"Título do post\" \"Descrição do post\""
     exit
 fi
 
