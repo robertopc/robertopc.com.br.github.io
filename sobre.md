@@ -6,7 +6,7 @@ permalink: /sobre/
 
 Olá me chamo Roberto, tenho {{ site.time | date: '%Y' | minus: 1991 }} anos, moro em {{site.cidade}}({{site.estado}}) e sou desenvolvedor web com mais de {{ site.time | date: '%Y' | minus: 2008 }} anos de experiência e paixão pelo que faço. Atualmente trabalho como {{site.profissao-atual}}. 
 
-Para visualizar meu currículo, acesse meu [Linkedin](https://www.linkedin.com/in/{{site.footer-links.linkedin}}) e meus códigos no [Github](https://www.github.com/{{site.footer-links.github-perfil}}).
+Para visualizar meu currículo, acesse meu [Linkedin](https://www.linkedin.com/in/{{site.footer-links.linkedin}}) e meus códigos no [Github](https://www.github.com/{{site.footer-links.github}}).
 
 Sou casado e pai de um moleque maravilhoso chamado Roger.
 
