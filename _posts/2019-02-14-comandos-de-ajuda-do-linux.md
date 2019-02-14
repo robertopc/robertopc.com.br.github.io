@@ -6,7 +6,7 @@ update:
 description: 'Apresenta alguns comandos que ajudam a entender o que são e/ou pra que servem os comandos do Linux.'
 author:      robertopc
 published:   true
-tags:        [linux, help]
+tags:        [linux]
 ---
 
 Este post apresenta alguns comandos que ajudam a entender o que são e/ou pra que servem os comandos do Linux.

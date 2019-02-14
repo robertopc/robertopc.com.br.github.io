@@ -1,12 +1,12 @@
 ---
 layout:	      post
-title:	      'Comando SED: substituição de texto no terminal Linux'
+title:	      'Comando SED: substituição de texto no Linux'
 date:	      2017-11-29 19:18:44 -0200
 update:  
-description:  'Explicação e exemplos de utilização do comando SED para substituição de texto no terminal do Linux.'
+description:  'Explicação e exemplos de utilização do comando SED para substituição de texto no Linux.'
 published:    true
 author:	      RobertoPC
-tags:	      [linux, sed]
+tags:	      [linux]
 permalink:    blog/comando-sed-substituicao-de-texto-no-terminal-linux/
 ---
 
