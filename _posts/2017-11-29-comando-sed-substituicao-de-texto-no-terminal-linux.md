@@ -12,12 +12,12 @@ permalink:    blog/comando-sed-substituicao-de-texto-no-terminal-linux/
 
 Neste post segue uma pequena explicação e exemplos de utilização do comando SED para substituição de texto no terminal do Linux.
 
-**O que é o comando SED?**
+##O que é o comando SED?
 
 O comando SED(stream editor) é um editor de texto não interativo para o terminal do Linux.
 Com ele podemos editar o conteúdo de arquivos automaticamente através do terminal, como por exemplo substituir textos, apagar linhas, traduzir caracteres, entre outras tarefas.
 
-**Substituindo texto**
+##Substituindo texto
 
 Para a substituição de texto, utilizamos o comando <code>'s/busca/substituição/'</code>. No exemplo abaixo, a palavra **limão** é substituida por **laranja**:
 
@@ -82,7 +82,7 @@ $ sed 's/limão/laranja/' suco.txt
 $ sed 's/limão/laranja/g' suco.txt
 > Eu gosto de suco de laranja e de picolé de laranja.
 ```
-**Expressões regulares**
+##Expressões regulares
 
 A porção de busca no comando de substituição, também pode ser uma expressão regular. Conforme os exemplos a seguir:
 
@@ -114,7 +114,7 @@ $ sed -i 's/^...//g' teste.txt ; cat teste.txt
 $ sed -i 's/\s//g' teste.txt ; cat teste.txt
 > gxstxdesxcxdemamãxelimãx.00000
 ```
-**Concluindo**
+##Concluindo
 
 O comando sed possui muito mais possibilidades do que as mostradas aqui. Caso queira conhece-las, consulte o manual no terminal com o comando <code>man sed</code> ou <code>info sed</code>.
 Outra ótima fonte de consulta é o site do [Aurelio Jargas](http://aurelio.net/sed/) sobre sed, o cara é o guru do sed.
