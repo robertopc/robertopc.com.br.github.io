@@ -13,7 +13,7 @@ permalink:    blog/comandos-de-ajuda-do-linux/
 Este post apresenta alguns comandos que ajudam a entender o que são e/ou pra que servem os comandos do Linux.
 
 ## Parâmetro `--help`
-Este é o parâmetro contido na maioria dos programas no Linux. Se você não sabe o que o comando faz, digite o comando seguido de `--help` que ele mostrará um pequeno manual.
+Este é o parâmetro contido na maioria dos comandos do Linux. Se você não sabe o que o comando faz, digite o comando seguido de `--help` que ele mostrará um pequeno manual.
 ```bash
 $ uname --help
 Usage: uname [OPTION]...
@@ -38,7 +38,7 @@ or available locally via: info '(coreutils) uname invocation'
 ```
 
 ## Comando `man`
-Este é o programa mais útil para te ajudar no Linux. Ele mostrará o manual completo do comando, descrevendo todas as opções e tudo que o comando pode fazer.
+Este é o comando mais útil para te ajudar no Linux. Ele mostrará o manual completo do comando, descrevendo todas as opções e tudo que o comando pode fazer.
 ```bash
 $ man uname
 UNAME(1)                                                             User Commands                                                            UNAME(1)
@@ -197,7 +197,7 @@ indicates failure.
 * [info na Wikipedia](https://en.wikipedia.org/wiki/Info_(Unix))
 
 ## Comando `whatis`
-`whatis`(o que é em português), mostra uma descrição simples do que é ou que faz o comando.
+`whatis`(o que é, em português), mostra uma descrição simples do que é ou o que faz comando.
 ```bash
 $ whatis uname
 uname (1)            - print system information
@@ -206,7 +206,7 @@ uname (2)            - get name and information about current kernel
 * [whatis na Wikipedia](https://en.wikipedia.org/wiki/Whatis)
 
 ## Comando `whereis`
-`whereis`(onde está em português), mostra a localização do programa na máquina.
+`whereis`(onde está, em português), mostra a localização do programa na máquina.
 ```bash
 $ whereis uname
 uname: /bin/uname /usr/share/man/man2/uname.2.gz /usr/share/man/man1/uname.1.gz
