@@ -7,6 +7,7 @@ description: 'Apresenta alguns comandos que ajudam a entender o que são e/ou pr
 author:      robertopc
 published:   true
 tags:        [linux]
+permalink:    blog/comandos-de-ajuda-do-linux/
 ---
 
 Este post apresenta alguns comandos que ajudam a entender o que são e/ou pra que servem os comandos do Linux.
