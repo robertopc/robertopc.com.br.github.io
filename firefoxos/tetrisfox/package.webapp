@@ -2,9 +2,9 @@
 	"version": "1.2.1",
     "name": "TetrisFOX",
 	"description": "The famous game Tetris for FirefoxOS",
-	"package_path": "http://robertopc.com.br/firefoxos/tetrisfox/tetrisfox.zip",
+	"package_path": "http://robertopc.github.io/firefoxos/tetrisfox/tetrisfox.zip",
     "developer": {
         "name": "RobertoPC",
-        "url": "http://robertopc.com.br"
+        "url": "http://robertopc.github.io"
     }
 }

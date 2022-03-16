@@ -13,7 +13,7 @@
     <a href="javascript:window.history.go(-1)">&#8592; Go back</a>
     <script>
         // This URL must be a full url.
-        var manifestUrl = 'http://robertopc.com.br/firefoxos/tetrisfox.manifest';
+        var manifestUrl = 'http://robertopc.github.io/firefoxos/tetrisfox.manifest';
         var req = navigator.mozApps.installPackage(manifestUrl);
         req.onsuccess = function() {
             document.getElementById('msg').innerHTML = "Successful installation!";
