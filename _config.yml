@@ -43,17 +43,17 @@ footer-links:
   flickr:
   github: robertopc
   googleplus: # anything in your profile username that comes after plus.google.com/
-  instagram:
+  instagram: robertopc0
   linkedin: robertopc0
   pinterest:
   rss: # just type anything here for a working RSS icon
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   tumblr: # https://<username>.tumblr.com
-  twitter: robertopc0
+  twitter: #robertopc0
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Text under the icons in footer
-footer-text: © 2019 ROBERTOPC
+footer-text: # © 2019 ROBERTOPC
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -111,6 +111,6 @@ exclude:
   - CNAME
 
 # personal infos
-cidade: Nova Iguaçu
+cidade: Rio de Janeiro
 estado: RJ
-profissao-atual: Programador na [UERJ](http://www.uerj.br)
+profissao-atual: Desenvolvedor Web no [Laboratório de Telessaúde da UERJ](https://www.telessaude.uerj.br)
